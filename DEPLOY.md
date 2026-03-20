@@ -1,33 +1,29 @@
 # 部署到 GitHub Pages
 
-## 当前状态
+## 一键部署（推荐）
 
-- ✅ Git 仓库已初始化
-- ✅ 已完成首次提交
-- ✅ 已配置远程仓库：`https://github.com/loewytetey123/styleguide-gh-pages.git`
+1. **双击运行** 项目根目录下的 `一键部署.command`
+2. 浏览器会打开 Token 创建页，勾选 **repo** 权限，生成后复制 Token
+3. 回到终端窗口，粘贴 Token（输入时不显示），按回车
+4. 等待完成，1–2 分钟后访问页面
 
-## 部署步骤
+## 访问链接
+
+**https://loewytetey123.github.io/styleguide-gh-pages/ai-design-intel.html**
+
+---
+
+## 手动部署
 
 ### 2. 推送代码
-
-在终端执行：
 
 ```bash
 cd /Users/luoxinting/Downloads/styleguide-gh-pages
 git push -u origin main
 ```
 
-若使用 HTTPS，推送时会提示输入 GitHub 用户名和密码。**密码请使用 [Personal Access Token](https://github.com/settings/tokens)**（需勾选 `repo` 权限），不要用登录密码。
+密码请使用 [Personal Access Token](https://github.com/settings/tokens)（勾选 `repo`）。
 
-### 3. 启用 GitHub Pages
+### 3. 启用 Pages
 
-1. 打开 [https://github.com/loewytetey123/styleguide-gh-pages/settings/pages](https://github.com/loewytetey123/styleguide-gh-pages/settings/pages)
-2. 在 **Source** 中选择 **Deploy from a branch**
-3. **Branch** 选择 `main`，路径选择 `/ (root)`
-4. 点击 Save
-
-### 4. 访问页面
-
-部署完成后（约 1–2 分钟），访问：
-
-- **AI 设计情报周报**：https://loewytetey123.github.io/styleguide-gh-pages/ai-design-intel.html
+打开 [Pages 设置](https://github.com/loewytetey123/styleguide-gh-pages/settings/pages) → Source 选 **Deploy from a branch** → Branch 选 `main`，Path 选 `/ (root)` → Save
