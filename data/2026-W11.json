@@ -1,0 +1,63 @@
+{
+  "week": "2026-W11",
+  "dateRange": "2026-03-10 ~ 2026-03-16",
+  "toolUpdates": [
+    {
+      "title": "Figma 社区插件周榜：自动化布局助手",
+      "platform": "Figma Community",
+      "author": "Community",
+      "date": "2026-03-12",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/community",
+      "tags": ["插件"],
+      "isAlert": false,
+      "summary": "归档周示例数据，可替换为真实抓取结果。",
+      "category": "plugin"
+    }
+  ],
+  "modelUpdates": [],
+  "trends": [
+    {
+      "title": "优设：设计行业周报（示例归档）",
+      "platform": "优设",
+      "author": "uisdc",
+      "date": "2026-03-11",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.uisdc.com/",
+      "tags": ["趋势分析"],
+      "isAlert": false,
+      "summary": "历史周报的占位条目。"
+    }
+  ],
+  "hotContent": [
+    {"title": "YouTube 设计频道周更（归档）", "platform": "YouTube", "author": "Design with Figma", "date": "2026-03-10", "likes": 800, "favorites": 0, "views": 30000, "url": "https://www.youtube.com/@DesignwithFigma", "tags": ["教程"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "YouTube 教程（归档）", "platform": "YouTube", "author": "Gary Simon", "date": "2026-03-11", "likes": 600, "favorites": 0, "views": 25000, "url": "https://www.youtube.com/@DesignCourse", "tags": ["教程"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "YouTube 工具评测（归档）", "platform": "YouTube", "author": "Flux Academy", "date": "2026-03-12", "likes": 1200, "favorites": 0, "views": 45000, "url": "https://www.youtube.com/@FluxAcademy", "tags": ["工具评测"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "YouTube 案例分享（归档）", "platform": "YouTube", "author": "AJ&Smart", "date": "2026-03-13", "likes": 500, "favorites": 0, "views": 20000, "url": "https://www.youtube.com/@ajsmart", "tags": ["案例"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "YouTube 趋势分析（归档）", "platform": "YouTube", "author": "DesignCourse", "date": "2026-03-14", "likes": 900, "favorites": 0, "views": 38000, "url": "https://www.youtube.com/@DesignCourse", "tags": ["趋势分析"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "YouTube Runway 教程（归档）", "platform": "YouTube", "author": "runwayml", "date": "2026-03-15", "likes": 400, "favorites": 0, "views": 22000, "url": "https://www.youtube.com/@runwayml", "tags": ["教程"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "Twitter Figma 动态（归档）", "platform": "Twitter/X", "author": "@figma", "date": "2026-03-10", "likes": 2000, "favorites": 0, "views": 50000, "url": "https://twitter.com/figma", "tags": ["趋势分析"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "Twitter OpenAI（归档）", "platform": "Twitter/X", "author": "@OpenAI", "date": "2026-03-11", "likes": 9000, "favorites": 0, "views": 200000, "url": "https://twitter.com/OpenAI", "tags": ["趋势分析"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "Twitter Midjourney（归档）", "platform": "Twitter/X", "author": "@midjourney", "date": "2026-03-12", "likes": 5000, "favorites": 0, "views": 120000, "url": "https://twitter.com/midjourney", "tags": ["案例"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "Twitter Spline（归档）", "platform": "Twitter/X", "author": "@spline_design", "date": "2026-03-13", "likes": 1500, "favorites": 0, "views": 40000, "url": "https://twitter.com/spline_design", "tags": ["工具更新"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "Twitter Firefly（归档）", "platform": "Twitter/X", "author": "@adobefirefly", "date": "2026-03-14", "likes": 800, "favorites": 0, "views": 35000, "url": "https://twitter.com/adobefirefly", "tags": ["案例"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "Twitter 设计讨论（归档）", "platform": "Twitter/X", "author": "@adesigner", "date": "2026-03-15", "likes": 600, "favorites": 0, "views": 28000, "url": "https://twitter.com/search?q=AI%20designer", "tags": ["趋势分析"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "小红书 优设速递（归档）", "platform": "小红书", "author": "优设网uisdc", "date": "2026-03-10", "likes": 3000, "favorites": 1000, "views": 0, "url": "https://www.xiaohongshu.com/", "tags": ["案例"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "小红书 AI 工具实测（归档）", "platform": "小红书", "author": "设计师小明", "date": "2026-03-11", "likes": 2500, "favorites": 800, "views": 0, "url": "https://www.xiaohongshu.com/", "tags": ["工具评测"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "小红书 Midjourney 教程（归档）", "platform": "小红书", "author": "AI绘画研究所", "date": "2026-03-12", "likes": 4200, "favorites": 2100, "views": 0, "url": "https://www.xiaohongshu.com/", "tags": ["教程"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "小红书 Figma 技巧（归档）", "platform": "小红书", "author": "Figma中文社区", "date": "2026-03-13", "likes": 1800, "favorites": 600, "views": 0, "url": "https://www.xiaohongshu.com/", "tags": ["教程"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "小红书 UI 灵感（归档）", "platform": "小红书", "author": "UI设计灵感库", "date": "2026-03-14", "likes": 3500, "favorites": 1500, "views": 0, "url": "https://www.xiaohongshu.com/", "tags": ["案例"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "小红书 即时设计（归档）", "platform": "小红书", "author": "即时设计官方", "date": "2026-03-15", "likes": 1200, "favorites": 400, "views": 0, "url": "https://www.xiaohongshu.com/", "tags": ["工具更新"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "哔哩哔哩 优设教程（归档）", "platform": "哔哩哔哩", "author": "优设网UISDC", "date": "2026-03-10", "likes": 5000, "favorites": 0, "views": 80000, "url": "https://space.bilibili.com/", "tags": ["教程"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "哔哩哔哩 设计思维（归档）", "platform": "哔哩哔哩", "author": "柴大丰老师", "date": "2026-03-11", "likes": 3200, "favorites": 0, "views": 55000, "url": "https://space.bilibili.com/", "tags": ["趋势分析"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "哔哩哔哩 硅谷视角（归档）", "platform": "哔哩哔哩", "author": "硅谷设计师Vivi", "date": "2026-03-12", "likes": 6800, "favorites": 0, "views": 120000, "url": "https://space.bilibili.com/", "tags": ["趋势分析"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "哔哩哔哩 工具速览（归档）", "platform": "哔哩哔哩", "author": "MX设计日记", "date": "2026-03-13", "likes": 2100, "favorites": 0, "views": 42000, "url": "https://space.bilibili.com/", "tags": ["工具评测"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "哔哩哔哩 设影记（归档）", "platform": "哔哩哔哩", "author": "设影记", "date": "2026-03-14", "likes": 8900, "favorites": 0, "views": 150000, "url": "https://space.bilibili.com/", "tags": ["趋势分析"], "isAlert": false, "summary": "归档示例。"},
+    {"title": "哔哩哔哩 设计师深海（归档）", "platform": "哔哩哔哩", "author": "设计师深海", "date": "2026-03-15", "likes": 4100, "favorites": 0, "views": 72000, "url": "https://space.bilibili.com/", "tags": ["教程"], "isAlert": false, "summary": "归档示例。"}
+  ],
+  "creatorRanking": []
+}

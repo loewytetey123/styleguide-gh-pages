@@ -1,0 +1,22 @@
+# 设计工具抓取关键词配置
+# 用于 Twitter / YouTube / 小红书 / B站 抓取新工具与更新
+
+# Twitter 抓新关键词
+twitter_query: >
+  Paper.dev OR Pencil.dev OR design as code OR AI UI tool 2026
+  OR new AI design tool OR generative UI
+
+# YouTube 抓新关键词
+youtube_query: >
+  Paper.dev tutorial OR Pencil.dev review OR design as code workflow
+  OR 2026 new AI design tool
+
+# 小红书 抓新关键词
+xiaohongshu_query: >
+  Paper设计工具 OR Pencil设计工具 OR 设计即代码
+  OR 2026新锐AI设计工具 OR AI原生设计
+
+# B站 抓新关键词
+bilibili_query: >
+  Paper设计工具 OR Pencil设计工具 OR 设计即代码
+  OR 2026新AI设计工具 OR AI UI工具

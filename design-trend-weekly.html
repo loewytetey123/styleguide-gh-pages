@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>设计趋势周报 | 每周更新</title>
+  <!--
+    设计趋势周报助手 - 示例网页
+    使用说明：
+    1. 本文件为单页静态 HTML，可直接用浏览器打开，无需任何构建工具。
+    2. 每周只需在最下方 <script> 中，替换 mock 数据数组（aiTools / creators / designNews），即可更新内容。
+    3. 若要调整视觉风格，请修改下方 <style> 中标注的“主题配色 & 字体”和“卡片样式”部分。
+  -->
+  <style>
+    /* ===== 全局基础样式：主题配色 & 字体 ===== */
+    :root {
+      --bg-main: #050816;
+      --bg-section: #0b1020;
+      --bg-card: #12182a;
+      --accent: #4f46e5;
+      --accent-soft: rgba(79, 70, 229, 0.2);
+      --accent-secondary: #22d3ee;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --card-radius: 16px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.75);
+      --border-subtle: 1px solid rgba(148, 163, 184, 0.25);
+      --transition-fast: 0.18s ease-out;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #1f2937 0, #020617 40%),
+        radial-gradient(circle at bottom right, #0f172a 0, #020617 45%);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      padding: 24px 16px 40px;
+    }
+
+    .page-shell {
+      width: 100%;
+      max-width: var(--max-width);
+    }
+
+    /* ===== 头部：标题 & 引导文案 ===== */
+    header {
+      margin-bottom: 24px;
+    }
+
+    .title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h1::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #f9fafb 0, #22d3ee 40%, #1d4ed8 100%);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.8);
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: radial-gradient(circle at 0 0, rgba(148, 163, 184, 0.16), transparent 55%);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.9);
+    }
+
+    /* ===== 控制区：更新按钮 ===== */
+    .control-panel {
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hint-text {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      max-width: 480px;
+    }
+
+    .refresh-button {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(129, 140, 248, 0.8);
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.3), transparent 60%),
+        linear-gradient(135deg, #4f46e5, #0ea5e9);
+      color: #f9fafb;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.85);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+        filter var(--transition-fast), background-position 0.3s ease-out;
+      background-size: 180% 180%;
+      background-position: 0% 50%;
+    }
+
+    .refresh-button span.icon {
+      font-size: 1.05rem;
+    }
+
+    .refresh-button span.label {
+      letter-spacing: 0.02em;
+    }
+
+    .refresh-button::after {
+      /* 发光轮廓 */
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: inherit;
+      border: 1px solid rgba(56, 189, 248, 0.6);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-fast);
+    }
+
+    .refresh-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.95);
+      filter: brightness(1.03);
+      background-position: 100% 50%;
+    }
+
+    .refresh-button:hover::after {
+      opacity: 1;
+    }
+
+    .refresh-button:active {
+      transform: translateY(0);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.85);
+      filter: brightness(0.98);
+    }
+
+    .refresh-button.loading {
+      cursor: wait;
+      filter: grayscale(0.1) brightness(0.9);
+      opacity: 0.9;
+    }
+
+    .refresh-button.loading span.icon {
+      animation: spin 0.8s linear infinite;
+      display: inline-block;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* ===== 主内容区：整体容器 ===== */
+    .content-shell {
+      border-radius: 22px;
+      background: linear-gradient(
+        145deg,
+        rgba(15, 23, 42, 0.92),
+        rgba(15, 23, 42, 0.96)
+      );
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: var(--shadow-soft);
+      padding: 18px 18px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content-shell::before {
+      /* 背景科技线条装饰 */
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.12), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(129, 140, 248, 0.12), transparent 55%),
+        linear-gradient(
+          120deg,
+          rgba(15, 23, 42, 0.9) 0%,
+          rgba(30, 64, 175, 0.3) 38%,
+          rgba(15, 23, 42, 0.95) 78%
+        );
+      opacity: 0.7;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .content-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 18px;
+    }
+
+    /* ===== 板块通用样式 ===== */
+    .section {
+      padding: 14px 14px 12px;
+      border-radius: 16px;
+      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95));
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.85);
+    }
+
+    /* AI 工具板块：更强的高光和色彩强调 */
+    .section--tools {
+      border-color: rgba(56, 189, 248, 0.7);
+      background:
+        radial-gradient(circle at top left, rgba(6, 182, 212, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.15), transparent 55%),
+        radial-gradient(circle at top left, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.96));
+    }
+
+    .section--tools .section-title-badge {
+      background: radial-gradient(circle at 30% 20%, #f9fafb 0, #22d3ee 38%, #0ea5e9 100%);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.9);
+    }
+
+    .section--tools .tag {
+      background: rgba(15, 23, 42, 0.92);
+      border-color: rgba(56, 189, 248, 0.5);
+      color: #e0f2fe;
+    }
+
+    /* 热门博主板块：略偏紫 / 品牌感 */
+    .section--creators {
+      border-color: rgba(139, 92, 246, 0.7);
+      background:
+        radial-gradient(circle at top left, rgba(139, 92, 246, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.15), transparent 55%),
+        radial-gradient(circle at top left, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.96));
+    }
+
+    .section--creators .section-title-badge {
+      background: radial-gradient(circle at 30% 20%, #f9fafb 0, #a855f7 38%, #ec4899 100%);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.9);
+    }
+
+    .section--creators .tag {
+      background: rgba(24, 24, 48, 0.96);
+      border-color: rgba(168, 85, 247, 0.55);
+      color: #f5e9ff;
+    }
+
+    /* 行业资讯板块：偏中性 / 略暖，用于“信息流” */
+    .section--news {
+      border-color: rgba(249, 115, 22, 0.7);
+      background:
+        radial-gradient(circle at top left, rgba(248, 250, 252, 0.06), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.18), transparent 55%),
+        radial-gradient(circle at top left, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.96));
+    }
+
+    .section--news .section-title-badge {
+      background: radial-gradient(circle at 30% 20%, #fefce8 0, #fb923c 38%, #f97316 100%);
+      box-shadow: 0 0 18px rgba(251, 146, 60, 0.9);
+    }
+
+    .section--news .tag {
+      background: rgba(24, 24, 36, 0.96);
+      border-color: rgba(251, 146, 60, 0.55);
+      color: #ffedd5;
+    }
+
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      font-weight: 550;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .section-title-badge {
+      width: 18px;
+      height: 18px;
+      border-radius: 7px;
+      background: radial-gradient(circle at 30% 20%, #f9fafb 0, #22d3ee 38%, #4f46e5 100%);
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.75);
+    }
+
+    .section-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.74rem;
+    }
+
+    .tag {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--text-muted);
+    }
+
+    /* 平台切换按钮（热门博主模块右上角） */
+    .platform-toggle {
+      display: inline-flex;
+      padding: 2px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      gap: 2px;
+    }
+
+    .platform-toggle-button {
+      border: none;
+      outline: none;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: background var(--transition-fast), color var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .platform-toggle-button.is-active {
+      background: linear-gradient(135deg, #4f46e5, #0ea5e9);
+      color: #f9fafb;
+    }
+
+    /* ===== 卡片网格布局 ===== */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    /* ===== 卡片样式 ===== */
+    .card {
+      padding: 12px 12px 10px;
+      border-radius: var(--card-radius);
+      background: radial-gradient(circle at top left, #111827, #020617);
+      border: 1px solid rgba(55, 65, 81, 0.75);
+      box-shadow: 0 8px 16px rgba(15, 23, 42, 0.8);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+        border-color var(--transition-fast), background var(--transition-fast);
+    }
+
+    .card::before {
+      /* 细线条高光 */
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.12), transparent 60%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-fast);
+    }
+
+    .card:hover {
+      transform: translateY(-4px) translateZ(0);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.98);
+      border-color: rgba(96, 165, 250, 0.85);
+      background: radial-gradient(circle at top left, #0b1220, #020617);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .card-title {
+      font-size: 0.92rem;
+      font-weight: 550;
+      color: #e5e7eb;
+      line-height: 1.35;
+    }
+
+    .card-tag {
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.2);
+      color: #bfdbfe;
+      white-space: nowrap;
+    }
+
+    .card-body {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* 工具网站截图样式（可选展示） */
+    .tool-screenshot {
+      margin-top: 6px;
+      border-radius: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      max-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .card-footer {
+      margin-top: 4px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+    }
+
+    .card-link {
+      color: var(--accent-secondary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .card-link svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    .card-link:hover {
+      text-decoration: underline;
+    }
+
+    .card-meta {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .card-meta--secondary {
+      display: block;
+      margin-top: 2px;
+      font-size: 0.74rem;
+      opacity: 0.9;
+    }
+
+    .empty-state {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding: 10px 0 2px;
+    }
+
+    /* ===== 响应式布局 ===== */
+    @media (max-width: 960px) {
+      .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 18px 12px 28px;
+      }
+
+      .content-shell {
+        padding: 14px 12px 14px;
+        border-radius: 18px;
+      }
+
+      .section {
+        padding: 12px 10px 10px;
+      }
+
+      .card-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .control-panel {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+
+      .refresh-button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header>
+      <div class="title-row">
+        <h1>设计趋势周报 | 每周更新</h1>
+        <div class="pill">
+          <span class="pill-dot"></span>
+          <span>近 7 天 · 设计 / 产品 / AI 精选</span>
+        </div>
+      </div>
+      <p class="subtitle">
+        为设计师和产品人整理最近一周值得关注的 AI 设计工具、内容创作者与行业动态。
+      </p>
+      <div class="meta-row" aria-hidden="true">
+        <span>适合：设计师 · 产品经理 · 创意团队周会</span>
+      </div>
+    </header>
+
+    <section class="control-panel">
+      <p class="hint-text">
+        点击下方按钮，刷新本周精选趋势。<br />
+        <strong>提示：</strong>每周只需替换脚本中的示例数据，即可快速更新整页内容。
+      </p>
+      <button id="refreshButton" class="refresh-button" type="button">
+        <span class="icon" aria-hidden="true">🔄</span>
+        <span class="label">获取本周最新趋势</span>
+      </button>
+    </section>
+
+    <main class="content-shell" aria-live="polite">
+      <div class="content-inner">
+        <!-- AI 设计工具板块 -->
+        <section class="section section--tools" aria-labelledby="section-tools">
+          <div class="section-header">
+            <div>
+              <div class="section-title" id="section-tools">
+                <span class="section-title-badge" aria-hidden="true"></span>
+                <span>AI 设计工具 · New Launch</span>
+              </div>
+              <p class="section-subtitle">
+                最近 7 天值得尝试的设计向 AI 工具 / 插件。
+              </p>
+            </div>
+            <div class="tag-row">
+              <span class="tag">Logo / 视觉生成</span>
+              <span class="tag">原型 & 交互动效</span>
+              <span class="tag">品牌资产管理</span>
+            </div>
+          </div>
+          <div id="toolsGrid" class="card-grid">
+            <!-- JS 渲染卡片 -->
+          </div>
+          <p id="toolsEmpty" class="empty-state" hidden>
+            暂无工具数据，请在脚本中的 <code>aiTools</code> 数组里补充本周工具。
+          </p>
+        </section>
+
+        <!-- 热门博主板块 -->
+        <section class="section section--creators" aria-labelledby="section-creators">
+          <div class="section-header">
+            <div>
+              <div class="section-title" id="section-creators">
+                <span class="section-title-badge" aria-hidden="true"></span>
+                <span>设计 / 产品 / AI 热门博主</span>
+              </div>
+              <p class="section-subtitle">
+                油管 / 小红书 / B 站上的高质量设计 & AI 内容创作者。
+              </p>
+            </div>
+            <div class="tag-row">
+              <div class="platform-toggle" id="creatorsPlatformToggle">
+                <button
+                  type="button"
+                  class="platform-toggle-button is-active"
+                  data-platform="YouTube"
+                >
+                  YouTube
+                </button>
+                <button
+                  type="button"
+                  class="platform-toggle-button"
+                  data-platform="小红书"
+                >
+                  小红书
+                </button>
+                <button
+                  type="button"
+                  class="platform-toggle-button"
+                  data-platform="Bilibili"
+                >
+                  Bilibili
+                </button>
+              </div>
+            </div>
+          </div>
+          <div id="creatorsGrid" class="card-grid">
+            <!-- JS 渲染卡片 -->
+          </div>
+          <p id="creatorsEmpty" class="empty-state" hidden>
+            暂无博主数据，请在脚本中的 <code>creators</code> 数组里补充本周推荐。
+          </p>
+        </section>
+
+        <!-- 行业资讯板块 -->
+        <section class="section section--news" aria-labelledby="section-news">
+          <div class="section-header">
+            <div>
+              <div class="section-title" id="section-news">
+                <span class="section-title-badge" aria-hidden="true"></span>
+                <span>设计行业热门资讯</span>
+              </div>
+              <p class="section-subtitle">
+                设计工具厂商更新、行业报告与值得收藏的观点文章。
+              </p>
+            </div>
+            <div class="tag-row">
+              <span class="tag">产品更新</span>
+              <span class="tag">趋势洞察</span>
+              <span class="tag">实战案例</span>
+            </div>
+          </div>
+          <div id="newsGrid" class="card-grid">
+            <!-- JS 渲染卡片 -->
+          </div>
+          <p id="newsEmpty" class="empty-state" hidden>
+            暂无资讯数据，请在脚本中的 <code>designNews</code> 数组里补充本周资讯。
+          </p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // ==========================
+    // ① 示例数据（每周更新这里）
+    // ==========================
+    // 提示：
+    // - 每周更新时，只需要替换下方三个数组的内容即可。
+    // - 字段结构建议保持不变，方便卡片模板直接复用。
+
+    /** 本周推荐的 AI 设计工具示例
+     *  提示：
+     *  - 可为每个工具补充 screenshot 字段（网站截图路径），页面会自动展示在卡片中。
+     *  - 建议将截图放在项目的 assets 目录下，例如 ./assets/tool-canva-magic-layers.png。
+     */
+    const aiTools = [
+      {
+        name: "Canva – Magic Layers",
+        description:
+          "Canva 新推出的 Magic Layers 能将 AI 生成的平面图自动拆分成可编辑图层，保留排版关系的同时，让你直接修改文案、元素和背景。",
+        url: "https://www.canva.com/",
+        // TODO: 换成你截取的 Canva Magic Layers 界面截图
+        screenshot: "./assets/tool-canva-magic-layers.png"
+      },
+      {
+        name: "Mowgli",
+        description:
+          "面向产品团队的 AI 设计工具，从头脑风暴到规范再到界面稿一条龙，支持导出到 Figma 或代码，适合快速验证产品方向。",
+        url: "https://mowgli.ai/",
+        // TODO: 换成你截取的 Mowgli 官网截图
+        screenshot: "./assets/tool-mowgli.png"
+      },
+      {
+        name: "brono",
+        description:
+          "将产品说明文档直接转成 Figma 级界面，强调一致性与可访问性，并提供预测热图帮助发现潜在可用性问题。",
+        url: "http://brono.ai/",
+        // TODO: 换成你截取的 brono 官网截图
+        screenshot: "./assets/tool-brono.png"
+      },
+      {
+        name: "Subframe",
+        description:
+          "AI 原生设计工具，所见即代码，支持多人实时协作和响应式布局，可输出干净的前端代码，适合设计与前端深度协同团队。",
+        url: "https://subframe.com/",
+        // TODO: 换成你截取的 Subframe 产品界面截图
+        screenshot: "./assets/tool-subframe.png"
+      }
+    ];
+
+    /** 本周值得关注的设计 / 产品 / AI 内容创作者示例
+     *  提示：
+     *  - 可为每位创作者补充 latestTitle / latestUrl 字段，用于展示“最新一条值得看的内容”并可点击跳转。
+     *  - latestUrl 建议直接填具体视频 / 笔记 / 专栏链接，方便你在周会上即点即看。
+     */
+    const creators = [
+      {
+        platform: "YouTube",
+        name: "Tom Krcha",
+        highlight: "前 Adobe / Figma 相关领域的设计师与产品人，长期分享 AI + 设计工作流实战。",
+        latestTitle: "I Watched 6 AI Agents Design an App Together And It Blew My Mind",
+        latestTitleZh: "我看着 6 个 AI 代理一起设计一款 App，效果震撼到爆",
+        latestUrl: "https://www.youtube.com/watch?v=w4RY7PnfRU8"
+      },
+      {
+        platform: "YouTube",
+        name: "Figma Design",
+        highlight: "聚焦 Figma 官方与社区实践，涵盖设计系统、组件库和 AI 协作等主题，适合产品设计团队系统学习。",
+        latestTitle: "How Figma engineers sync designs with Claude Code and Codex",
+        latestTitleZh: "Figma 工程团队如何用 Claude Code 等工具打通设计与代码",
+        latestUrl: "https://www.youtube.com/watch?v=I5X4_mYoiM8"
+      },
+      {
+        platform: "YouTube",
+        name: "Shopify UX / Design",
+        highlight: "从大型电商产品视角讲解如何把 AI 引入设计流程，包括信息架构、实验与高保真界面制作。",
+        latestTitle: "How I use Claude Code as a Designer at Shopify",
+        latestTitleZh: "作为 Shopify 设计师，我是如何把 Claude Code 融入日常工作流的",
+        latestUrl: "https://www.youtube.com/watch?v=aVDAhJ3PtLg"
+      },
+      {
+        platform: "小红书",
+        name: "产品喵喵喵",
+        highlight: "用轻量手绘拆解产品流程，顺便分享 AI 工具如何嵌入日常工作流。",
+        latestTitle: "一整套「从需求到原型」的 AI 辅助设计工作流拆解",
+        // TODO: 将链接替换为你实际关注的小红书笔记链接
+        latestUrl: "https://www.xiaohongshu.com"
+      },
+      {
+        platform: "小红书",
+        name: "AI小蓝Design",
+        highlight: "专注 AIGC 头像与角色设计，分享如何用 AI 做风格统一的人物与 IP 形象。",
+        latestTitle: "用一组提示词快速生成整套 AI 个人品牌头像",
+        latestUrl: "https://www.xiaohongshu.com/user/profile/63a574f400000000260077b6"
+      },
+      {
+        platform: "小红书",
+        name: "小夕设计",
+        highlight: "长期输出 PS / AI 设计基础与进阶教程，适合作为视觉设计打底的知识库。",
+        latestTitle: "从 0 到 1 的新手界面版式提升指南",
+        latestUrl: "https://www.newrank.cn/profile/xiaohongshu/65ade069000000001001ddbf"
+      },
+      {
+        platform: "Bilibili",
+        name: "即梦AI教程",
+        highlight: "系统讲解 AI 绘画与视频生成，对设计师如何落地 AI 工具有较多实战示例。",
+        latestTitle: "全 108 集：即梦AI5.0 独家保姆级教程（AI 绘画 + 图生视频完整流程）",
+        latestUrl: "https://www.bilibili.com/video/BV1nSFpzEEdY/"
+      },
+      {
+        platform: "Bilibili",
+        name: "UXbot 实战演示",
+        highlight: "围绕 UXbot 等 AI 设计工具做实战演示，重点在交互流程与界面细节如何一键生成。",
+        latestTitle: "还在为墨刀 mastergo 点赞？UXbot 一键让你的设计多“亿点”高级感！",
+        latestUrl: "https://www.bilibili.com/opus/1076796641014448161"
+      },
+      {
+        platform: "Bilibili",
+        name: "AI 设计指南 · Cursor 实战",
+        highlight: "结合 Cursor + Claude 等工具，从零搭一整套 APP UI，适合希望用 AI 提效的 UX / UI 设计师。",
+        latestTitle: "【Cursor 实操】Cursor 让普通人也能轻松设计一套 APP 精美 UI",
+        latestUrl: "https://www.bilibili.com/video/BV1UoXmY9EDo/"
+      },
+      {
+        platform: "Bilibili",
+        name: "AI 设计指南 · 妙多 Motiff",
+        highlight: "聚焦 AI 设计工具「妙多」在多页面界面生成上的能力，演示如何 5 分钟产出整套 UI。",
+        latestTitle: "AI 设计工具，妙多 | 5 分钟生成整套 UI 界面｜设计师效率革命",
+        latestUrl: "https://www.bilibili.com/video/BV1x8ZEYEEsd/"
+      }
+    ];
+
+    /** 本周设计行业资讯示例 */
+    const designNews = [
+      {
+        title: "某头部设计工具推出多模型协作画布，支持 AI 版本对比",
+        source: "Product News Weekly",
+        summary:
+          "新版本允许团队在同一设计稿中切换多种 AI 生成方案，并对关键组件做版本对比和回滚。"
+      },
+      {
+        title: "年度《设计趋势白皮书》发布，AI 协作被视为基础能力",
+        source: "Design Futures Report",
+        summary:
+          "报告指出，AI 将从「灵感辅助」走向「工作流编排」，设计师角色更偏向策略与判断。"
+      },
+      {
+        title: "多家互联网公司开始招聘「AI Design Ops」岗位",
+        source: "UX Hiring Radar",
+        summary:
+          "新岗位主要负责维护设计系统、选型 AI 工具、搭建内部可复用的 AI 设计工作流。"
+      }
+    ];
+
+    // ==========================
+    // ② DOM 渲染工具函数
+    // ==========================
+
+    /** 工具方法：创建带 class 的元素 */
+    function el(tag, className, text) {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text) node.textContent = text;
+      return node;
+    }
+
+    /** 渲染 AI 工具卡片 */
+    function renderTools() {
+      const grid = document.getElementById("toolsGrid");
+      const empty = document.getElementById("toolsEmpty");
+      grid.innerHTML = "";
+
+      if (!aiTools.length) {
+        empty.hidden = false;
+        return;
+      }
+      empty.hidden = true;
+
+      // 只展示前 6 个最新工具，方便控制信息密度
+      aiTools.slice(0, 6).forEach((tool) => {
+        const card = el("article", "card");
+
+        const header = el("div", "card-header");
+        const title = el("h3", "card-title", tool.name);
+        const tag = el("span", "card-tag", "AI 设计工具");
+        header.appendChild(title);
+        header.appendChild(tag);
+
+        const body = el("div", "card-body");
+        const desc = el("p", "", tool.description);
+        body.appendChild(desc);
+
+        // 若配置了工具网站截图，则渲染在描述下方
+        if (tool.screenshot) {
+          const img = el("img", "tool-screenshot");
+          img.src = tool.screenshot;
+          img.alt = `${tool.name} 网站截图`;
+          body.appendChild(img);
+        }
+
+        const footer = el("div", "card-footer");
+        if (tool.url) {
+          const link = el("a", "card-link");
+          link.href = tool.url;
+          // 使用同一标签页打开，避免部分环境禁止新标签跳转导致“点了没反应”的体验
+          // 如需改为新标签页，可将下一行改为：link.target = "_blank";
+          link.textContent = "访问官网";
+          footer.appendChild(link);
+        }
+
+        card.appendChild(header);
+        card.appendChild(body);
+        card.appendChild(footer);
+        grid.appendChild(card);
+      });
+    }
+
+    let currentCreatorsPlatform = "YouTube";
+
+    /** 渲染热门博主卡片（含“最新内容”跳转链接），按平台筛选并仅展示最新 6 条 */
+    function renderCreators(platform = currentCreatorsPlatform) {
+      currentCreatorsPlatform = platform;
+      const grid = document.getElementById("creatorsGrid");
+      const empty = document.getElementById("creatorsEmpty");
+      grid.innerHTML = "";
+
+      const filtered = creators.filter(
+        (creator) => creator.platform === platform
+      );
+
+      if (!filtered.length) {
+        empty.hidden = false;
+        return;
+      }
+      empty.hidden = true;
+
+      filtered.slice(0, 6).forEach((creator) => {
+        const card = el("article", "card");
+
+        const header = el("div", "card-header");
+        const title = el("h3", "card-title", creator.name);
+        const tag = el("span", "card-tag", creator.platform);
+        header.appendChild(title);
+        header.appendChild(tag);
+
+        const body = el("p", "card-body", creator.highlight);
+
+        const footer = el("div", "card-footer");
+
+        // 若配置了最新内容链接，则展示可点击的最新内容入口
+        if (creator.latestUrl) {
+          const link = el("a", "card-link");
+          link.href = creator.latestUrl;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.textContent = creator.latestTitle || "查看最新内容";
+          footer.appendChild(link);
+        }
+
+        const meta = el("span", "card-meta", "持续输出 · 适合收藏进学习清单");
+        footer.appendChild(meta);
+
+        // 对于英文标题的链接，如果提供了简体中文翻译，则在底部追加一行中文说明
+        if (creator.latestTitleZh) {
+          const zh = el(
+            "span",
+            "card-meta card-meta--secondary",
+            creator.latestTitleZh
+          );
+          footer.appendChild(zh);
+        }
+
+        card.appendChild(header);
+        card.appendChild(body);
+        card.appendChild(footer);
+        grid.appendChild(card);
+      });
+    }
+
+    /** 渲染行业资讯卡片 */
+    function renderNews() {
+      const grid = document.getElementById("newsGrid");
+      const empty = document.getElementById("newsEmpty");
+      grid.innerHTML = "";
+
+      if (!designNews.length) {
+        empty.hidden = false;
+        return;
+      }
+      empty.hidden = true;
+
+      designNews.forEach((news) => {
+        const card = el("article", "card");
+
+        const header = el("div", "card-header");
+        const title = el("h3", "card-title", news.title);
+        const tag = el("span", "card-tag", news.source);
+        header.appendChild(title);
+        header.appendChild(tag);
+
+        const body = el("p", "card-body", news.summary);
+
+        const footer = el("div", "card-footer");
+        const meta = el("span", "card-meta", "适合在周会中引用 / 转发讨论");
+        footer.appendChild(meta);
+
+        card.appendChild(header);
+        card.appendChild(body);
+        card.appendChild(footer);
+        grid.appendChild(card);
+      });
+    }
+
+    /** 一键渲染全部板块 */
+    function renderAll() {
+      renderTools();
+      renderCreators(currentCreatorsPlatform);
+      renderNews();
+    }
+
+    // ==========================
+    // ③ 按钮交互逻辑
+    // ==========================
+
+    const refreshButton = document.getElementById("refreshButton");
+    const creatorsPlatformToggle = document.getElementById(
+      "creatorsPlatformToggle"
+    );
+
+    /** 点击按钮时模拟一次“获取本周趋势”的刷新 */
+    function handleRefreshClick() {
+      if (!refreshButton) return;
+
+      refreshButton.classList.add("loading");
+      refreshButton.disabled = true;
+
+      // 轻微延迟，营造“正在刷新”的反馈感受
+      setTimeout(() => {
+        renderAll();
+        refreshButton.classList.remove("loading");
+        refreshButton.disabled = false;
+      }, 500);
+    }
+
+    refreshButton?.addEventListener("click", handleRefreshClick);
+
+    // 热门博主模块平台切换
+    creatorsPlatformToggle?.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+      const button = target.closest("[data-platform]");
+      if (!button) return;
+
+      const platform = button.getAttribute("data-platform");
+      if (!platform) return;
+
+      // 更新按钮样式
+      const buttons = creatorsPlatformToggle.querySelectorAll(
+        ".platform-toggle-button"
+      );
+      buttons.forEach((btn) => btn.classList.remove("is-active"));
+      button.classList.add("is-active");
+
+      // 渲染对应平台的前 6 条最新创作者
+      renderCreators(platform);
+    });
+
+    // 页面初次加载时，默认渲染一版示例数据
+    window.addEventListener("DOMContentLoaded", () => {
+      renderAll();
+    });
+  </script>
+</body>
+</html>
+
