@@ -7,30 +7,42 @@
       "platform": "Google Labs",
       "author": "Google",
       "date": "2026-03-19",
+      "logoBg": "light",
       "likes": 0,
       "favorites": 0,
       "views": 0,
       "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fblog.google&width=640&height=360&format=webp",
-      "tags": ["new AI design tool", "generative UI", "vibe design"],
+      "tags": [
+        "new AI design tool",
+        "generative UI",
+        "vibe design"
+      ],
       "isAlert": true,
       "summary": "语音直接对画布说话即可生成界面；AI 原生无限画布、设计 Agent 实时反馈；SDK/MCP 连接 Claude Code、Cursor、Gemini CLI。",
-      "category": "new"
+      "category": "new",
+      "logoName": "Google Stitch"
     },
     {
       "title": "Paper：design, share, ship — 连接团队与 Agent 的设计画布",
       "platform": "官网",
       "author": "Paper",
       "date": "2026-03-05",
+      "logoBg": "gradient",
       "likes": 0,
       "favorites": 0,
       "views": 0,
       "url": "https://paper.design/",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fpaper.design&width=640&height=360&format=webp",
-      "tags": ["设计即代码", "AI 原生设计", "generative UI"],
+      "tags": [
+        "设计即代码",
+        "AI 原生设计",
+        "generative UI"
+      ],
       "isAlert": false,
       "summary": "基于 Web 标准的 connected canvas，Paper Desktop + Paper MCP，设计即代码双向同步，支持 Claude Code、Copilot。",
-      "category": "new"
+      "category": "new",
+      "logoName": "Paper"
     },
     {
       "title": "Pencil AI：design as code，IDE 内嵌设计到代码",
@@ -42,10 +54,15 @@
       "views": 0,
       "url": "https://pencil.dev/",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fpencil.dev&width=640&height=360&format=webp",
-      "tags": ["设计即代码", "AI UI tool 2026", "design as code"],
+      "tags": [
+        "设计即代码",
+        "AI UI tool 2026",
+        "design as code"
+      ],
       "isAlert": false,
       "summary": ".pen 文件存于 Git，MCP 协议让 AI 生成 React/HTML/CSS，支持 Figma 导入，Claude Code 集成。",
-      "category": "new"
+      "category": "new",
+      "logoName": "Pencil AI"
     },
     {
       "title": "OpenPencil：免费 AI 设计编辑器，可打开 Figma 文件",
@@ -57,10 +74,14 @@
       "views": 0,
       "url": "https://www.withlore.co/blog/openpencil-free-ai-design-editor/",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.withlore.co&width=640&height=360&format=webp",
-      "tags": ["新工具", "Figma 兼容"],
+      "tags": [
+        "新工具",
+        "Figma 兼容"
+      ],
       "isAlert": false,
       "summary": "免费 AI 设计编辑器，支持直接打开 Figma 文件，设计即代码工作流。",
-      "category": "new"
+      "category": "new",
+      "logoName": "OpenPencil"
     },
     {
       "title": "Galileo AI：文生 UI，30–60 秒生成高保真界面",
@@ -72,55 +93,75 @@
       "views": 0,
       "url": "https://www.usegalileo.ai/",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.usegalileo.ai&width=640&height=360&format=webp",
-      "tags": ["新工具", "AI 设计", "generative UI"],
+      "tags": [
+        "新工具",
+        "AI 设计",
+        "generative UI"
+      ],
       "isAlert": false,
       "summary": "自然语言描述生成 HTML/Tailwind 与 Figma 设计，适合快速原型与概念验证。",
-      "category": "new"
+      "category": "new",
+      "logoName": "Galileo AI"
     },
     {
       "title": "Figma AI 积分：按需购买与 Full 席位限额执行",
       "platform": "官方",
       "author": "Figma",
       "date": "2026-03-18",
+      "logoBg": "dark",
       "likes": 0,
       "favorites": 0,
       "views": 0,
       "url": "https://www.figma.com/blog/updates-to-ai-credits-in-figma/",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
-      "tags": ["工具更新", "AI 功能"],
+      "tags": [
+        "工具更新",
+        "AI 功能"
+      ],
       "isAlert": true,
       "summary": "组织/企业可增购积分；Full 席位超额后付费 AI 功能将受限至次月重置或增购。",
-      "category": "existing"
+      "category": "existing",
+      "logoName": "Figma AI 积分"
     },
     {
       "title": "Gemini 3 Pro 现已接入 Figma Make",
       "platform": "Figma 官方",
       "author": "Figma",
       "date": "2026-03-18",
+      "logoBg": "dark",
       "likes": 0,
       "favorites": 0,
       "views": 0,
       "url": "https://www.figma.com/blog/gemini-3-pro-is-now-available-in-figma-make/",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
-      "tags": ["工具更新", "AI 功能"],
+      "tags": [
+        "工具更新",
+        "AI 功能"
+      ],
       "isAlert": false,
       "summary": "实验性模型，支持 0→1 生成、多风格探索、设计转代码，可在设置中启用。",
-      "category": "existing"
+      "category": "existing",
+      "logoName": "Figma"
     },
     {
       "title": "Figma Make：提示词构建交互原型与代码",
       "platform": "官方",
       "author": "Figma",
       "date": "2026-03-19",
+      "logoBg": "dark",
       "likes": 0,
       "favorites": 0,
       "views": 0,
       "url": "https://www.figma.com/solutions/ai-design-systems-generator/",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
-      "tags": ["工具更新", "AI 功能"],
+      "tags": [
+        "工具更新",
+        "AI 功能"
+      ],
       "isAlert": false,
       "summary": "设计系统与原型向「提示词驱动」延伸，支持 wireframe 转功能屏、自然语言生成 UI。",
-      "category": "existing"
+      "category": "existing",
+      "logoName": "Figma Make"
     },
     {
       "title": "Midjourney V7 风格控制与一致性工作流",
@@ -132,10 +173,14 @@
       "views": 210000,
       "url": "https://twitter.com/midjourney",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Ftwitter.com%2Fmidjourney&width=640&height=360&format=webp",
-      "tags": ["工具更新", "案例"],
+      "tags": [
+        "工具更新",
+        "案例"
+      ],
       "isAlert": false,
       "summary": "社区关注新版本在角色/产品图一致性上的迭代，适合品牌视觉管线评估。",
-      "category": "existing"
+      "category": "existing",
+      "logoName": "@midjourney"
     },
     {
       "title": "Spline AI 场景：3D 与 UI 结合的可视化",
@@ -147,10 +192,14 @@
       "views": 88000,
       "url": "https://twitter.com/spline_design",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Ftwitter.com%2Fspline_design&width=640&height=360&format=webp",
-      "tags": ["案例", "趋势分析"],
+      "tags": [
+        "案例",
+        "趋势分析"
+      ],
       "isAlert": false,
       "summary": "3D Web 与生成式素材衔接，适合落地页与产品演示。",
-      "category": "existing"
+      "category": "existing",
+      "logoName": "Spline AI 场景"
     },
     {
       "title": "AI 文案填充 + 设计令牌同步（Figma 插件）",
@@ -162,7 +211,10 @@
       "favorites": 0,
       "views": 45000,
       "url": "https://www.figma.com/community",
-      "tags": ["Figma", "插件"],
+      "tags": [
+        "Figma",
+        "插件"
+      ],
       "isAlert": false,
       "summary": "插件组合将文案、变量与组件库串联，减少手工维护成本。",
       "category": "plugin"
@@ -177,7 +229,10 @@
       "favorites": 0,
       "views": 0,
       "url": "https://www.figma.com/community/plugin/857346721138427112",
-      "tags": ["Figma", "插件"],
+      "tags": [
+        "Figma",
+        "插件"
+      ],
       "isAlert": false,
       "summary": "设计稿导出为生产级代码，支持响应式与组件化。",
       "category": "plugin"
@@ -192,13 +247,136 @@
       "favorites": 0,
       "views": 0,
       "url": "https://iconify.design/",
-      "tags": ["Figma", "Sketch", "PS", "插件"],
+      "tags": [
+        "Figma",
+        "Sketch",
+        "PS",
+        "插件"
+      ],
       "isAlert": false,
       "summary": "海量图标库，支持多设计工具，搜索即用。",
       "category": "plugin"
     }
   ],
   "modelUpdates": [],
+  "officialUpdates": [
+    {
+      "title": "Figma AI 积分：按需购买与 Full 席位限额执行",
+      "platform": "Figma 官方",
+      "author": "Figma",
+      "date": "2026-03-18",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/updates-to-ai-credits-in-figma/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "AI 功能"
+      ],
+      "isAlert": true,
+      "summary": "组织/企业可增购积分；Full 席位超额后付费 AI 功能将受限至次月重置或增购。",
+      "category": "existing",
+      "logoName": "Figma AI 积分"
+    },
+    {
+      "title": "Gemini 3 Pro 现已接入 Figma Make",
+      "platform": "Figma 官方",
+      "author": "Figma",
+      "date": "2026-03-18",
+      "logoBg": "dark",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/gemini-3-pro-is-now-available-in-figma-make/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "AI 功能"
+      ],
+      "isAlert": false,
+      "summary": "实验性模型，支持 0→1 生成、多风格探索、设计转代码，可在设置中启用。",
+      "category": "existing",
+      "logoName": "Figma"
+    },
+    {
+      "title": "Gemini 3 Pro is now in Figma Make",
+      "platform": "YouTube",
+      "author": "Figma",
+      "date": "2026-03-18",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=L0XRkE7b9Hg",
+      "thumbnail": "https://img.youtube.com/vi/L0XRkE7b9Hg/mqdefault.jpg",
+      "tags": [
+        "工具更新",
+        "Gemini",
+        "Figma"
+      ],
+      "isAlert": false,
+      "summary": "Gemini 3 Pro 接入 Figma Make，多风格探索与设计转代码。",
+      "category": "existing",
+      "logoName": "Figma"
+    },
+    {
+      "title": "Midjourney V7 风格控制与一致性工作流",
+      "platform": "Twitter/X",
+      "author": "@midjourney",
+      "date": "2026-03-18",
+      "likes": 8900,
+      "favorites": 0,
+      "views": 210000,
+      "url": "https://twitter.com/midjourney",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Ftwitter.com%2Fmidjourney&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "案例"
+      ],
+      "isAlert": false,
+      "summary": "社区关注新版本在角色/产品图一致性上的迭代，适合品牌视觉管线评估。",
+      "category": "existing",
+      "logoName": "@midjourney"
+    },
+    {
+      "title": "Spline AI 场景：3D 与 UI 结合的可视化",
+      "platform": "Twitter/X",
+      "author": "@spline_design",
+      "date": "2026-03-17",
+      "likes": 3200,
+      "favorites": 0,
+      "views": 88000,
+      "url": "https://twitter.com/spline_design",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Ftwitter.com%2Fspline_design&width=640&height=360&format=webp",
+      "tags": [
+        "案例",
+        "趋势分析"
+      ],
+      "isAlert": false,
+      "summary": "3D Web 与生成式素材衔接，适合落地页与产品演示。",
+      "category": "existing",
+      "logoName": "Spline AI 场景"
+    },
+    {
+      "title": "Figma Make：提示词构建交互原型与代码",
+      "platform": "Figma 官方",
+      "author": "Figma",
+      "date": "2026-03-19",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/solutions/ai-design-systems-generator/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "AI 功能"
+      ],
+      "isAlert": false,
+      "summary": "设计系统与原型向「提示词驱动」延伸，支持 wireframe 转功能屏、自然语言生成 UI。",
+      "category": "existing",
+      "logoName": "Figma Make"
+    }
+  ],
   "trends": [
     {
       "title": "优设 | 从执行到思考：资深设计师总结的 2026 年 AI 设计趋势",
@@ -209,7 +387,9 @@
       "favorites": 0,
       "views": 0,
       "url": "https://www.uisdc.com/design-partner-2026",
-      "tags": ["趋势分析"],
+      "tags": [
+        "趋势分析"
+      ],
       "isAlert": false,
       "summary": "从生成式到对话式、从单一思考到全感知设计、AI 开始否定你等六大趋势。"
     },
@@ -222,7 +402,10 @@
       "favorites": 0,
       "views": 0,
       "url": "https://www.uisdc.com/2026-design-career-trends",
-      "tags": ["趋势分析", "职业"],
+      "tags": [
+        "趋势分析",
+        "职业"
+      ],
       "isAlert": false,
       "summary": "技术执行商品化与「人本溢价」两极分化，AI 智能体、生成式 UI、技能工程。"
     },
@@ -235,7 +418,10 @@
       "favorites": 0,
       "views": 0,
       "url": "https://www.uisdc.com/2026-ai-workflow",
-      "tags": ["工具评测", "工作流"],
+      "tags": [
+        "工具评测",
+        "工作流"
+      ],
       "isAlert": false,
       "summary": "Gemini 3 Pro + Lovart/ComfyUI + 即梦 Agent 组合，效率提升 300%。"
     },
@@ -248,7 +434,10 @@
       "favorites": 0,
       "views": 0,
       "url": "https://www.uisdc.com/ai-experience-design",
-      "tags": ["教程", "趋势分析"],
+      "tags": [
+        "教程",
+        "趋势分析"
+      ],
       "isAlert": false,
       "summary": "AI 交互设计能力提升的全面总结。"
     },
@@ -261,7 +450,10 @@
       "favorites": 0,
       "views": 0,
       "url": "https://www.theregister.com/2026/03/19/google_stitch_vibe_design_update/",
-      "tags": ["工具更新", "趋势"],
+      "tags": [
+        "工具更新",
+        "趋势"
+      ],
       "isAlert": false,
       "summary": "Stitch 支持语音输入与无限画布，开发者可直接对画布说话生成界面。"
     },
@@ -274,7 +466,10 @@
       "favorites": 0,
       "views": 0,
       "url": "https://www.uisdc.com/ai-design",
-      "tags": ["案例", "教程"],
+      "tags": [
+        "案例",
+        "教程"
+      ],
       "isAlert": false,
       "summary": "AI 辅助设计项目实战经验分享。"
     },
@@ -287,7 +482,10 @@
       "favorites": 0,
       "views": 0,
       "url": "https://www.zcool.com.cn/",
-      "tags": ["趋势分析", "UI"],
+      "tags": [
+        "趋势分析",
+        "UI"
+      ],
       "isAlert": false,
       "summary": "界面风格与 AI 生成布局的融合方向。"
     },
@@ -300,7 +498,10 @@
       "favorites": 0,
       "views": 0,
       "url": "https://www.smashingmagazine.com/",
-      "tags": ["趋势分析", "可访问性"],
+      "tags": [
+        "趋势分析",
+        "可访问性"
+      ],
       "isAlert": false,
       "summary": "设计系统与工程落地的国际视角。"
     },
@@ -313,7 +514,10 @@
       "favorites": 0,
       "views": 0,
       "url": "https://www.nxcode.io/resources/news/google-stitch-complete-guide-vibe-design-2026",
-      "tags": ["工具评测", "教程"],
+      "tags": [
+        "工具评测",
+        "教程"
+      ],
       "isAlert": false,
       "summary": "Stitch 2026 完整使用指南，Voice Canvas 与 MCP 集成。"
     }
@@ -329,7 +533,11 @@
       "views": 9600,
       "url": "https://www.youtube.com/watch?v=8srE3eWkqpg",
       "thumbnail": "https://img.youtube.com/vi/8srE3eWkqpg/mqdefault.jpg",
-      "tags": ["教程", "Figma Make", "AI 设计"],
+      "tags": [
+        "教程",
+        "Figma Make",
+        "AI 设计"
+      ],
       "isAlert": false,
       "summary": "14 分钟完整教程：wireframe 转功能屏、自然语言生成 UI、主题切换与动效。"
     },
@@ -343,7 +551,11 @@
       "views": 0,
       "url": "https://www.youtube.com/watch?v=L0XRkE7b9Hg",
       "thumbnail": "https://img.youtube.com/vi/L0XRkE7b9Hg/mqdefault.jpg",
-      "tags": ["工具更新", "Gemini", "Figma"],
+      "tags": [
+        "工具更新",
+        "Gemini",
+        "Figma"
+      ],
       "isAlert": false,
       "summary": "Gemini 3 Pro 接入 Figma Make，多风格探索与设计转代码。"
     },
@@ -357,7 +569,11 @@
       "views": 0,
       "url": "https://www.youtube.com/watch?v=Bdp-ZQiLrJQ",
       "thumbnail": "https://img.youtube.com/vi/Bdp-ZQiLrJQ/mqdefault.jpg",
-      "tags": ["教程", "Google AI", "平面设计"],
+      "tags": [
+        "教程",
+        "Google AI",
+        "平面设计"
+      ],
       "isAlert": false,
       "summary": "面向平面设计师的免费 Google AI 工具完整教程。"
     },
@@ -371,7 +587,10 @@
       "views": 0,
       "url": "https://www.youtube.com/watch?v=UGe3sSl_5X0",
       "thumbnail": "https://img.youtube.com/vi/UGe3sSl_5X0/mqdefault.jpg",
-      "tags": ["教程", "AI Design Agent"],
+      "tags": [
+        "教程",
+        "AI Design Agent"
+      ],
       "isAlert": false,
       "summary": "全球首个 AI 设计 Agent 速成课程。"
     },
@@ -385,7 +604,10 @@
       "views": 0,
       "url": "https://www.youtube.com/watch?v=Zrqpq-uQBM0",
       "thumbnail": "https://img.youtube.com/vi/Zrqpq-uQBM0/mqdefault.jpg",
-      "tags": ["工具评测", "Figma Make"],
+      "tags": [
+        "工具评测",
+        "Figma Make"
+      ],
       "isAlert": false,
       "summary": "Figma Make 深度评测：变革者还是噱头？"
     },
@@ -399,7 +621,10 @@
       "views": 0,
       "url": "https://www.youtube.com/watch?v=hDb14KTmbgk",
       "thumbnail": "https://img.youtube.com/vi/hDb14KTmbgk/mqdefault.jpg",
-      "tags": ["工具评测", "对比"],
+      "tags": [
+        "工具评测",
+        "对比"
+      ],
       "isAlert": false,
       "summary": "Lovable 与 Figma Make 对比：谁更适合 AI 设计工作流。"
     },
@@ -413,7 +638,10 @@
       "views": 0,
       "url": "https://x.com/MengTo",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fx.com%2FMengTo&width=640&height=360&format=webp",
-      "tags": ["趋势分析", "AI 设计"],
+      "tags": [
+        "趋势分析",
+        "AI 设计"
+      ],
       "isAlert": false,
       "summary": "DesignCode 创始人分享 AI 设计工作流与 Figma 集成实践。"
     },
@@ -427,7 +655,10 @@
       "views": 0,
       "url": "https://x.com/figma",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fx.com%2Ffigma&width=640&height=360&format=webp",
-      "tags": ["工具更新", "趋势分析"],
+      "tags": [
+        "工具更新",
+        "趋势分析"
+      ],
       "isAlert": false,
       "summary": "Google Stitch 与 Figma 生态的 AI 设计动态。"
     },
@@ -441,7 +672,10 @@
       "views": 0,
       "url": "https://x.com/midjourney",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fx.com%2Fmidjourney&width=640&height=360&format=webp",
-      "tags": ["案例", "教程"],
+      "tags": [
+        "案例",
+        "教程"
+      ],
       "isAlert": false,
       "summary": "品牌一致性、SREF 与角色/产品图工作流。"
     },
@@ -455,7 +689,10 @@
       "views": 0,
       "url": "https://x.com/godofprompt",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fx.com%2Fgodofprompt&width=640&height=360&format=webp",
-      "tags": ["教程", "design as code"],
+      "tags": [
+        "教程",
+        "design as code"
+      ],
       "isAlert": false,
       "summary": "Pencil、Paper 设计即代码工具链讨论。"
     },
@@ -469,7 +706,9 @@
       "views": 0,
       "url": "https://x.com/karpathy",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fx.com%2Fkarpathy&width=640&height=360&format=webp",
-      "tags": ["趋势分析"],
+      "tags": [
+        "趋势分析"
+      ],
       "isAlert": false,
       "summary": "多模态与生成式 UI 的学术与产品视角。"
     },
@@ -483,7 +722,10 @@
       "views": 0,
       "url": "https://x.com/steipete",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fx.com%2Fsteipete&width=640&height=360&format=webp",
-      "tags": ["工具评测", "趋势分析"],
+      "tags": [
+        "工具评测",
+        "趋势分析"
+      ],
       "isAlert": false,
       "summary": "开发者视角下的 AI 设计工具与工作流。"
     },
@@ -497,7 +739,10 @@
       "views": 0,
       "url": "https://www.xiaohongshu.com/search_result?keyword=AI%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.xiaohongshu.com%2Fsearch_result%3Fkeyword%3DAI%25E8%25AE%25BE%25E8%25AE%25A1%25E5%25B7%25A5%25E5%2585%25B7&width=640&height=360&format=webp",
-      "tags": ["工具评测", "教程"],
+      "tags": [
+        "工具评测",
+        "教程"
+      ],
       "isAlert": false,
       "summary": "按标签：AI设计工具、UI设计 AI、生成式UI，中文环境协作实测。"
     },
@@ -511,7 +756,10 @@
       "views": 0,
       "url": "https://www.xiaohongshu.com/search_result?keyword=AIGC%E8%AE%BE%E8%AE%A1%E6%95%99%E7%A8%8B",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.xiaohongshu.com%2Fsearch_result%3Fkeyword%3DAIGC%25E8%25AE%25BE%25E8%25AE%25A1%25E6%2595%2599%25E7%25A8%258B&width=640&height=360&format=webp",
-      "tags": ["教程", "Figma"],
+      "tags": [
+        "教程",
+        "Figma"
+      ],
       "isAlert": false,
       "summary": "内容标签：AI设计、UI/UX、设计教程、工具评测。"
     },
@@ -525,7 +773,10 @@
       "views": 0,
       "url": "https://www.xiaohongshu.com/search_result?keyword=Pencil%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.xiaohongshu.com%2Fsearch_result%3Fkeyword%3DPencil%25E8%25AE%25BE%25E8%25AE%25A1%25E5%25B7%25A5%25E5%2585%25B7&width=640&height=360&format=webp",
-      "tags": ["教程", "案例"],
+      "tags": [
+        "教程",
+        "案例"
+      ],
       "isAlert": false,
       "summary": "Pencil、Paper 设计即代码在中文社区的实践分享。"
     },
@@ -539,7 +790,10 @@
       "views": 0,
       "url": "https://www.xiaohongshu.com/search_result?keyword=2026%E6%96%B0%E9%94%90AI%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.xiaohongshu.com%2Fsearch_result%3Fkeyword%3D2026%25E6%2596%25B0%25E9%2594%2590AI%25E8%25AE%25BE%25E8%25AE%25A1%25E5%25B7%25A5%25E5%2585%25B7&width=640&height=360&format=webp",
-      "tags": ["教程", "工具评测"],
+      "tags": [
+        "教程",
+        "工具评测"
+      ],
       "isAlert": false,
       "summary": "AI原生设计、设计即代码工具汇总。"
     },
@@ -553,7 +807,10 @@
       "views": 0,
       "url": "https://www.xiaohongshu.com/search_result?keyword=UI%E8%AE%BE%E8%AE%A1+AI",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.xiaohongshu.com%2Fsearch_result%3Fkeyword%3DUI%25E8%25AE%25BE%25E8%25AE%25A1%2BAI&width=640&height=360&format=webp",
-      "tags": ["工具评测", "趋势分析"],
+      "tags": [
+        "工具评测",
+        "趋势分析"
+      ],
       "isAlert": false,
       "summary": "常见可用性与无障碍问题归纳。"
     },
@@ -567,7 +824,10 @@
       "views": 0,
       "url": "https://www.xiaohongshu.com/search_result?keyword=Figma+AI%E6%8F%92%E4%BB%B6",
       "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.xiaohongshu.com%2Fsearch_result%3Fkeyword%3DFigma%2BAI%25E6%258F%2592%25E4%25BB%25B6&width=640&height=360&format=webp",
-      "tags": ["工具更新", "协作"],
+      "tags": [
+        "工具更新",
+        "协作"
+      ],
       "isAlert": false,
       "summary": "设计师、AI设计博主、设计工具达人视角。"
     },
@@ -581,7 +841,12 @@
       "views": 131,
       "url": "https://www.bilibili.com/video/BV15FkvBbEq9",
       "thumbnail": "http://i2.hdslb.com/bfs/archive/823299102f2aec5ac67054d6418b2f0f4b448bc3.jpg",
-      "tags": ["教程", "SD", "ComfyUI", "AI绘画"],
+      "tags": [
+        "教程",
+        "SD",
+        "ComfyUI",
+        "AI绘画"
+      ],
       "isAlert": false,
       "summary": "34 集全系列：SD 基础、ControlNet、ComfyUI 工作流，附整合包。"
     },
@@ -595,7 +860,11 @@
       "views": 0,
       "url": "https://www.bilibili.com/video/BV1D7421N7xN",
       "thumbnail": "http://i0.hdslb.com/bfs/archive/c7886ed98bba8a30a305e52f8865a980b2cf0915.jpg",
-      "tags": ["教程", "ComfyUI", "Stable Diffusion"],
+      "tags": [
+        "教程",
+        "ComfyUI",
+        "Stable Diffusion"
+      ],
       "isAlert": false,
       "summary": "节点式界面新手教学，工作流导出与分享。"
     },
@@ -609,7 +878,10 @@
       "views": 0,
       "url": "https://www.bilibili.com/video/BV1uz421d7pJ",
       "thumbnail": "http://i1.hdslb.com/bfs/archive/1b25e70b31e715c891d8e9de2d0c27a80c180eb3.jpg",
-      "tags": ["工具评测", "对比"],
+      "tags": [
+        "工具评测",
+        "对比"
+      ],
       "isAlert": false,
       "summary": "ComfyUI 与 WebUI 哪个更好？该学哪个？"
     },
@@ -623,7 +895,12 @@
       "views": 404000,
       "url": "https://www.bilibili.com/video/BV1vwCFBPEMG",
       "thumbnail": "http://i1.hdslb.com/bfs/archive/6b5b9b98eca36eb8de6f80cfd94dc7bf271fd202.jpg",
-      "tags": ["教程", "AI绘画", "提示词", "SD"],
+      "tags": [
+        "教程",
+        "AI绘画",
+        "提示词",
+        "SD"
+      ],
       "isAlert": false,
       "summary": "AI 提示词干货、stablediffusion 全套分享，附工具案例整合。"
     },
@@ -637,7 +914,12 @@
       "views": 150000,
       "url": "https://www.bilibili.com/video/BV16CnjzSExA",
       "thumbnail": "http://i1.hdslb.com/bfs/archive/c665a08ae16a0576ae53d53064e17ddba939ffcb.jpg",
-      "tags": ["教程", "ComfyUI", "SD", "整合包"],
+      "tags": [
+        "教程",
+        "ComfyUI",
+        "SD",
+        "整合包"
+      ],
       "isAlert": false,
       "summary": "2 月最新 StableDiffusion + Comfyui 保姆级教程，附整合包。"
     },
@@ -651,21 +933,75 @@
       "views": 435000,
       "url": "https://www.bilibili.com/video/BV1gwuozDEjj",
       "thumbnail": "http://i0.hdslb.com/bfs/archive/6dfc01e0e70c14287a5aefb04c82cab0c3aaac14.jpg",
-      "tags": ["教程", "ComfyUI", "工作流"],
+      "tags": [
+        "教程",
+        "ComfyUI",
+        "工作流"
+      ],
       "isAlert": false,
       "summary": "ComfyUI3.0 汉化整合包，全程干货，带整合包无私分享。"
     }
   ],
   "creatorRanking": [
-    { "name": "@midjourney", "platform": "Twitter/X", "heat": 98, "note": "AI image generation 官方" },
-    { "name": "@figma", "platform": "Twitter/X", "heat": 96, "note": "generative UI workflow" },
-    { "name": "comfyui教程工作流", "platform": "哔哩哔哩", "heat": 95, "note": "43.5万播放 ComfyUI 教程" },
-    { "name": "画屋", "platform": "哔哩哔哩", "heat": 94, "note": "40.4万播放 AI绘画教程" },
-    { "name": "Midjourney研究所", "platform": "小红书", "heat": 93, "note": "9100赞 设计即代码" },
-    { "name": "Codecademy", "platform": "YouTube", "heat": 92, "note": "Figma Make 教程" },
-    { "name": "UI设计灵感库", "platform": "小红书", "heat": 91, "note": "7200赞 工具避雷" },
-    { "name": "AI设计研究所", "platform": "小红书", "heat": 90, "note": "6200赞 工具实测" },
-    { "name": "@MengTo", "platform": "Twitter/X", "heat": 89, "note": "DesignCode 创始人" },
-    { "name": "@karpathy", "platform": "Twitter/X", "heat": 88, "note": "AI researcher 视角" }
+    {
+      "name": "@midjourney",
+      "platform": "Twitter/X",
+      "heat": 98,
+      "note": "AI image generation 官方"
+    },
+    {
+      "name": "@figma",
+      "platform": "Twitter/X",
+      "heat": 96,
+      "note": "generative UI workflow"
+    },
+    {
+      "name": "comfyui教程工作流",
+      "platform": "哔哩哔哩",
+      "heat": 95,
+      "note": "43.5万播放 ComfyUI 教程"
+    },
+    {
+      "name": "画屋",
+      "platform": "哔哩哔哩",
+      "heat": 94,
+      "note": "40.4万播放 AI绘画教程"
+    },
+    {
+      "name": "Midjourney研究所",
+      "platform": "小红书",
+      "heat": 93,
+      "note": "9100赞 设计即代码"
+    },
+    {
+      "name": "Codecademy",
+      "platform": "YouTube",
+      "heat": 92,
+      "note": "Figma Make 教程"
+    },
+    {
+      "name": "UI设计灵感库",
+      "platform": "小红书",
+      "heat": 91,
+      "note": "7200赞 工具避雷"
+    },
+    {
+      "name": "AI设计研究所",
+      "platform": "小红书",
+      "heat": 90,
+      "note": "6200赞 工具实测"
+    },
+    {
+      "name": "@MengTo",
+      "platform": "Twitter/X",
+      "heat": 89,
+      "note": "DesignCode 创始人"
+    },
+    {
+      "name": "@karpathy",
+      "platform": "Twitter/X",
+      "heat": 88,
+      "note": "AI researcher 视角"
+    }
   ]
 }

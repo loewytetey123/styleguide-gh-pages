@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Monday</title>
+  <title>设计周一见 · AI Trends</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -33,7 +33,7 @@
 
     body {
       font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: #ffffff;
+      background: #f9f9fa;
       color: var(--text);
       line-height: 1.5;
       min-height: 100vh;
@@ -41,54 +41,71 @@
       overflow-x: hidden;
     }
 
-    /* Paico-style landing background: three-column flex layout */
+    /* 中间 1280px 固定，左右背景固定不随滚动 */
     .landing-area-one {
       display: flex;
-      align-items: stretch;
-      justify-content: flex-start;
+      justify-content: center;
       min-height: 100vh;
     }
 
     .landing-area-left,
     .landing-area-right {
-      flex: 1;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      z-index: 0;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: stretch;
       overflow: hidden;
+    }
+
+    .landing-area-left {
+      left: 0;
+      width: max(0px, calc(50% - 640px));
+      justify-content: flex-end;
+    }
+
+    .landing-area-right {
+      right: 0;
+      width: max(0px, calc(50% - 640px));
+      justify-content: flex-start;
     }
 
     .landing-area-left img,
     .landing-area-right img {
-      width: 100%;
+      width: auto;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
 
     .landing-area-left img {
-      object-position: right;
+      object-position: right center;
     }
 
     .landing-area-right img {
-      object-position: left;
+      object-position: left center;
     }
 
     .landing-area-middle {
-      flex: 1 1 auto;
+      flex: 0 1 1280px;
+      width: 1280px;
       min-width: 0;
-      width: var(--max);
-      max-width: calc(100% - 40px);
+      max-width: 100%;
       display: flex;
       flex-direction: column;
+      background: #f9f9fa;
       border-width: 0 1px;
       border-style: solid;
       border-color: rgba(0, 0, 0, 0.08);
       box-sizing: border-box;
+      position: relative;
+      z-index: 1;
     }
 
     .wrap {
       flex: 1;
-      padding: 80px 14px 64px;
+      padding: 80px 24px 80px;
       position: relative;
       box-sizing: border-box;
     }
@@ -101,11 +118,19 @@
 
     header.top h1 {
       font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 700;
-      letter-spacing: -0.04em;
       color: #000000;
       line-height: 1.2;
       margin-bottom: 4px;
+    }
+
+    header.top h1 .hero-cn {
+      font-family: "PingFang SC", "PingFang TC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      font-weight: 700;
+    }
+
+    header.top h1 .hero-en {
+      font-family: "Inter", sans-serif;
+      font-weight: 700;
     }
 
     .hero-rotating-wrap {
@@ -170,39 +195,108 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      margin-bottom: 32px;
+      align-items: stretch;
+      gap: 16px;
+      margin-bottom: 48px;
     }
 
     .tabs button {
-      background: #000000;
-      color: #ffffff;
+      position: relative;
+      height: 48px;
+      min-width: 144px;
+      border-radius: 999px;
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 500;
       letter-spacing: -0.01em;
-      padding: 12px 24px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 4px 14px rgba(0, 0, 0, 0.15);
-      transition: all 0.2s ease;
+      padding: 0 36px;
+      border: 1px solid #000000;
+      background: transparent;
+      color: #000000;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .tabs button .tab-glow,
+    .tabs button .tab-mask,
+    .tabs button .star {
+      display: none;
+    }
+
+    .tabs button .tab-text {
+      position: relative;
+      z-index: 2;
     }
 
     .tabs button:hover {
-      background: #1a1a1a;
-      transform: translateY(-1px);
-      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 6px 20px rgba(0, 0, 0, 0.2);
+      border-color: #333;
+      color: #333;
+    }
+
+    .tabs button:active {
+      transform: scale(0.95);
     }
 
     .tabs button.active {
-      background: #000000;
+      border-color: transparent;
+      background: transparent;
       color: #ffffff;
-      border-color: rgba(255, 255, 255, 0.12);
-      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset, 0 4px 14px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 24px rgba(30, 58, 138, 0.3), 0 0 40px rgba(124, 58, 237, 0.2);
     }
 
+    .tabs button.active .tab-glow,
+    .tabs button.active .tab-mask,
+    .tabs button.active .star {
+      display: block;
+    }
+
+    .tabs button.active .tab-glow {
+      position: absolute;
+      inset: -50%;
+      background: conic-gradient(from 0deg, #1e3a8a, #7c3aed, #ffffff, #1e3a8a);
+      animation: tab-glow-spin 3s linear infinite;
+    }
+
+    .tabs button.active .tab-mask {
+      position: absolute;
+      inset: 1px;
+      background: rgba(0, 0, 0, 0.9);
+      border-radius: 999px;
+      z-index: 1;
+    }
+
+    .tabs button.active .star {
+      position: absolute;
+      border-radius: 50%;
+      background: white;
+      z-index: 1;
+      animation: star-twinkle 2s ease-in-out infinite;
+      animation-delay: calc(var(--delay) * 1s);
+    }
+
+    .tabs button.active .star:nth-child(3) { left: 15%; top: 30%; width: 4px; height: 4px; }
+    .tabs button.active .star:nth-child(4) { right: 20%; top: 25%; width: 2px; height: 2px; background: #bfdbfe; }
+    .tabs button.active .star:nth-child(5) { left: 25%; bottom: 35%; width: 3px; height: 3px; }
+    .tabs button.active .star:nth-child(6) { right: 15%; bottom: 30%; width: 2px; height: 2px; background: #bfdbfe; }
+    .tabs button.active .star:nth-child(7) { left: calc(50% - 1px); top: 20%; width: 2px; height: 2px; }
+
     .tabs button.active:hover {
-      background: #1a1a1a;
+      transform: scale(1.05);
+      box-shadow: 0 8px 32px rgba(30, 58, 138, 0.4), 0 0 48px rgba(124, 58, 237, 0.3);
+    }
+
+    .tabs button.active:active {
+      transform: scale(0.95);
+    }
+
+    @keyframes tab-glow-spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes star-twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
     }
 
     .panel {
@@ -217,9 +311,10 @@
       background: linear-gradient(135deg, var(--accent-soft) 0%, rgba(20, 184, 166, 0.05) 100%);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 12px 16px;
-      margin-bottom: 16px;
-      font-size: 0.85rem;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
 
     .banner strong {
@@ -228,7 +323,7 @@
 
     .grid {
       display: grid;
-      gap: 12px;
+      gap: 20px;
     }
 
     @media (min-width: 720px) {
@@ -242,6 +337,7 @@
 
     .grid.cols-3-tools {
       grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
     @media (max-width: 1024px) {
       .grid.cols-3-tools {
@@ -258,7 +354,7 @@
       background: #ffffff;
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 14px 16px;
+      padding: 20px 22px;
       box-shadow: var(--shadow-card);
       transition: all 0.25s ease;
     }
@@ -270,37 +366,38 @@
     }
 
     .card h3 {
-      font-size: 0.95rem;
+      font-size: 1.05rem;
       font-weight: 600;
-      margin-bottom: 6px;
-      line-height: 1.35;
+      margin-bottom: 10px;
+      line-height: 1.4;
     }
 
     .card .meta {
-      font-size: 0.75rem;
+      font-size: 0.82rem;
       color: var(--muted);
       display: flex;
       flex-wrap: wrap;
-      gap: 6px 10px;
-      margin-bottom: 6px;
+      gap: 8px 12px;
+      margin-bottom: 10px;
     }
 
     .card p.summary {
-      font-size: 0.82rem;
+      font-size: 0.9rem;
       color: #334155;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      line-height: 1.5;
     }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 5px;
-      margin-bottom: 8px;
+      gap: 8px;
+      margin-bottom: 10px;
     }
 
     .tag {
-      font-size: 0.68rem;
-      padding: 2px 8px;
+      font-size: 0.75rem;
+      padding: 3px 10px;
       border-radius: 999px;
       background: rgba(20, 184, 166, 0.1);
       border: 1px solid rgba(20, 184, 166, 0.2);
@@ -316,7 +413,7 @@
     a.link {
       color: var(--accent);
       text-decoration: none;
-      font-size: 0.82rem;
+      font-size: 0.9rem;
       font-weight: 500;
       transition: color 0.2s ease;
     }
@@ -328,11 +425,11 @@
 
     .thumb {
       width: 100%;
-      height: 100px;
+      height: 120px;
       object-fit: cover;
       border-radius: 10px;
       background: linear-gradient(135deg, #ccfbf1 0%, #99f6e4 100%);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .thumb-placeholder {
@@ -343,12 +440,11 @@
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #ccfbf1 0%, #99f6e4 100%);
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
     }
 
     .thumb-16x9-wrap {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       border-radius: 8px;
       overflow: hidden;
       position: relative;
@@ -357,18 +453,174 @@
     .thumb-16x9-wrap .thumb-fallback {
       width: 100%;
       aspect-ratio: 16 / 9;
-      border-radius: 10px;
       display: flex;
-      background: linear-gradient(135deg, #ccfbf1 0%, #99f6e4 100%);
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
     }
 
     .card-tool .thumb-16x9-wrap {
+      margin-bottom: 0;
+    }
+
+    /* toools.design 风格：设计工具卡片 */
+    .card-tool-wrap {
+      position: relative;
+    }
+
+    .card-tool {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      overflow: hidden;
+      border-radius: 24px;
+      border: none;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      background: #ffffff;
+      transition: box-shadow 0.25s ease;
+    }
+
+    .card-tool-wrap:hover .card-tool {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-tool > a:first-child {
+      flex: 0 0 auto;
+      display: block;
+      overflow: hidden;
+      padding: 14px 14px 0;
+    }
+
+    .card-tool .thumb-16x9-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .card-tool .thumb-16x9,
+    .card-tool .thumb-16x9-wrap .thumb-fallback {
+      aspect-ratio: 2.465 / 1;
+      border-radius: 16px;
+    }
+
+    .card-tool .thumb-16x9-wrap .thumb-fallback {
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
+    }
+
+    .card-tool .thumb-16x9-wrap .thumb-fallback.logo-bg-light {
+      background: #ffffff;
+    }
+
+    .card-tool .thumb-16x9-wrap .thumb-fallback.logo-bg-dark {
+      background: #000000;
+    }
+
+    .card-tool .thumb-16x9-wrap .thumb-fallback.logo-bg-dark img {
+      filter: brightness(0) invert(1);
+    }
+
+    .card-tool .thumb-16x9-wrap .thumb-fallback.logo-bg-gradient {
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+    }
+
+    .card-tool .thumb-16x9-wrap .thumb-fallback.logo-bg-gradient img {
+      filter: brightness(0) invert(1);
+    }
+
+    .card-tool .thumb-16x9-wrap .thumb-fallback .fallback-text {
+      color: #6b7280;
+    }
+
+    .card-tool .thumb-16x9-wrap .thumb-fallback.logo-bg-dark .fallback-text {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .card-tool .thumb-16x9-wrap .thumb-fallback.logo-bg-gradient .fallback-text {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .card-tool .thumb-16x9-wrap .thumb-fallback.thumb-logo-name .tool-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+    }
+
+    .card-tool .thumb-16x9-wrap .thumb-fallback.thumb-logo-name .fallback-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: inherit;
+    }
+
+    .card-tool .thumb-16x9-wrap .thumb-fallback.logo-bg-light .fallback-name {
+      color: #1f2937;
+    }
+
+    .card-tool .card-tool-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      min-height: 0;
+    }
+
+    .card-tool .card-tool-body .card-tool-title {
+      font-family: "Inter", -apple-system, sans-serif;
+      font-weight: 700;
+      font-size: 1.125rem;
+      line-height: 1.3;
+      color: #000000;
+      margin-bottom: 10px;
+    }
+
+    .card-tool .card-tool-body .card-tool-desc {
+      font-family: "Inter", -apple-system, sans-serif;
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: #6b7280;
+      line-height: 1.5;
       margin-bottom: 12px;
+      flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-tool .card-tool-body .card-tool-meta {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      margin-bottom: 14px;
+    }
+
+    .card-tool .card-tool-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: auto;
+    }
+
+    .card-tool .card-tool-footer .link {
+      font-size: 0.875rem;
+    }
+
+    .card-tool .card-tool-footer .tag-pill {
+      font-size: 0.7rem;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: #FEF9C3;
+      color: #a16207;
+      font-weight: 500;
+      margin-left: auto;
+    }
+
+    .card-tool .card-tool-footer .tag-pill.alert {
+      background: #fef2f2;
+      color: #b91c1c;
     }
 
     .card-plugin {
       display: flex;
-      gap: 14px;
+      gap: 18px;
       align-items: flex-start;
     }
 
@@ -389,11 +641,12 @@
     }
 
     .section-title {
-      font-size: 1rem;
+      font-size: 1.125rem;
       font-weight: 700;
-      margin: 24px 0 12px;
+      margin: 40px 0 16px;
       color: var(--text);
       letter-spacing: -0.02em;
+      line-height: 1.35;
     }
 
     .section-title:first-of-type {
@@ -402,63 +655,68 @@
 
     .h-scroll {
       display: flex;
-      gap: 12px;
+      gap: 24px;
       overflow-x: auto;
-      padding-bottom: 8px;
+      padding-bottom: 12px;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
     }
 
     .h-scroll .card {
-      flex: 0 0 min(260px, 85vw);
+      flex: 0 0 min(280px, 85vw);
+      scroll-snap-align: start;
+    }
+
+    .h-scroll .card-tool-wrap {
+      flex: 0 0 min(360px, 85vw);
       scroll-snap-align: start;
     }
 
     .platform-block {
-      margin-bottom: 24px;
-      scroll-margin-top: 12px;
+      margin-bottom: 36px;
+      scroll-margin-top: 16px;
     }
 
     .platform-tabs {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 16px;
+      gap: 10px;
+      margin-bottom: 20px;
       position: sticky;
       top: 0;
       z-index: 5;
       background: #ffffff;
-      padding: 10px 0;
+      padding: 14px 0;
     }
 
     .platform-tabs button {
       font: inherit;
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.9);
-      padding: 8px 16px;
-      border-radius: 10px;
+      border: 1px solid #000;
+      background: #fff;
+      padding: 6px 16px;
+      border-radius: 999px;
       cursor: pointer;
-      font-size: 0.9rem;
-      color: var(--text);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #000;
       transition: all 0.2s ease;
     }
 
     .platform-tabs button:hover {
-      border-color: rgba(20, 184, 166, 0.5);
-      color: var(--accent);
+      border-color: #333;
+      color: #333;
     }
 
     .platform-tabs button.active {
-      background: linear-gradient(135deg, var(--accent-soft) 0%, rgba(20, 184, 166, 0.08) 100%);
-      color: var(--accent);
-      border-color: rgba(20, 184, 166, 0.4);
+      background: #000;
+      color: #fff;
+      border-color: #000;
       font-weight: 600;
-      box-shadow: 0 2px 8px rgba(20, 184, 166, 0.2);
     }
 
     .platform-block h4 {
-      font-size: 0.95rem;
-      margin-bottom: 10px;
+      font-size: 1.05rem;
+      margin-bottom: 14px;
       color: var(--text);
       display: flex;
       align-items: center;
@@ -466,7 +724,7 @@
     }
 
     .platform-block h4 span {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       font-weight: 500;
       color: var(--muted);
     }
@@ -478,8 +736,8 @@
     .overview-kpis {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 12px;
-      margin-bottom: 20px;
+      gap: 16px;
+      margin-bottom: 24px;
     }
 
     .kpi {
@@ -548,8 +806,8 @@
     }
 
     footer {
-      margin-top: 40px;
-      padding-top: 16px;
+      margin-top: 56px;
+      padding-top: 24px;
       border-top: 1px solid var(--border);
       font-size: 0.8rem;
       color: var(--muted);
@@ -605,21 +863,48 @@
     <div class="landing-area-middle">
   <div class="wrap">
     <header class="top">
-      <h1>AI Monday</h1>
+      <h1><span class="hero-cn">设计周一见 · </span><span class="hero-en">AI Trends</span></h1>
       <p class="hero-rotating-wrap"><span id="heroRotating" class="hero-rotating">UI Design</span></p>
       <p class="sub" id="weekLine">加载中…</p>
     </header>
 
     <div class="tabs" role="tablist" aria-label="周报板块">
-      <button type="button" class="tab" data-tab="trends" role="tab">AI 趋势</button>
-      <button type="button" class="tab active" data-tab="tools" role="tab" aria-selected="true">AI 工具</button>
-      <button type="button" class="tab" data-tab="hot" role="tab">设计博主</button>
+      <button type="button" class="tab active" data-tab="hot" role="tab" aria-selected="true">
+        <span class="tab-glow"></span>
+        <span class="tab-mask"></span>
+        <span class="star" style="--delay:0"></span>
+        <span class="star" style="--delay:0.2"></span>
+        <span class="star" style="--delay:0.4"></span>
+        <span class="star" style="--delay:0.6"></span>
+        <span class="star" style="--delay:0.8"></span>
+        <span class="tab-text">设计博主</span>
+      </button>
+      <button type="button" class="tab" data-tab="tools" role="tab">
+        <span class="tab-glow"></span>
+        <span class="tab-mask"></span>
+        <span class="star" style="--delay:0"></span>
+        <span class="star" style="--delay:0.2"></span>
+        <span class="star" style="--delay:0.4"></span>
+        <span class="star" style="--delay:0.6"></span>
+        <span class="star" style="--delay:0.8"></span>
+        <span class="tab-text">设计工具</span>
+      </button>
+      <button type="button" class="tab" data-tab="trends" role="tab">
+        <span class="tab-glow"></span>
+        <span class="tab-mask"></span>
+        <span class="star" style="--delay:0"></span>
+        <span class="star" style="--delay:0.2"></span>
+        <span class="star" style="--delay:0.4"></span>
+        <span class="star" style="--delay:0.6"></span>
+        <span class="star" style="--delay:0.8"></span>
+        <span class="tab-text">AI 设计趋势</span>
+      </button>
     </div>
 
     <div id="banner" class="banner" hidden></div>
 
-    <section id="panel-tools" class="panel active" role="tabpanel"></section>
-    <section id="panel-hot" class="panel" role="tabpanel"></section>
+    <section id="panel-hot" class="panel active" role="tabpanel"></section>
+    <section id="panel-tools" class="panel" role="tabpanel"></section>
     <section id="panel-trends" class="panel" role="tabpanel"></section>
 
     <footer>
@@ -736,7 +1021,7 @@
 
     let state = {
       data: null,
-      tab: "tools"
+      tab: "hot"
     };
 
     function heatScore(item) {
@@ -792,12 +1077,13 @@
       if (showThumb) {
         const thumbUrl = hotContentThumbUrl(item);
         const bvMatch = item.url && item.url.match(/\/video\/(BV[a-zA-Z0-9]+)/);
+        const thumbPlaceholder = '<div class="thumb thumb-placeholder" style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;color:var(--muted);font-size:0.75rem"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>内容预览</div>';
         if (thumbUrl) {
-          thumb = `<img class="thumb" src="${escapeAttr(thumbUrl)}" alt="" loading="lazy" onerror="this.style.display='none';var n=this.nextElementSibling;if(n)n.style.display='block'" /><div class="thumb thumb-placeholder" style="display:none"></div>`;
+          thumb = `<img class="thumb" src="${escapeAttr(thumbUrl)}" alt="" loading="lazy" onerror="this.style.display='none';var n=this.nextElementSibling;if(n){n.style.display='flex';n.style.flexDirection='column'}"/><div class="thumb thumb-placeholder" style="display:none;align-items:center;justify-content:center;flex-direction:column;gap:6px;color:var(--muted);font-size:0.75rem"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>内容预览</div>`;
         } else if (bvMatch && item.platform === "哔哩哔哩") {
           thumb = `<div class="thumb" style="position:relative;overflow:hidden"><img class="thumb" data-bvid="${escapeAttr(bvMatch[1])}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" /></div>`;
         } else {
-          thumb = '<div class="thumb" aria-hidden="true"></div>';
+          thumb = thumbPlaceholder;
         }
       }
       const stats = [];
@@ -858,19 +1144,40 @@
           </article>
         `;
       }
-      const thumbSrc = screenshotUrl(item);
-      const thumb = thumbSrc
-        ? `<div class="thumb-16x9-wrap"><img class="thumb-16x9" src="${escapeAttr(thumbSrc)}" alt="" loading="lazy" onerror="this.onerror=null;this.style.display='none';var f=this.nextElementSibling;if(f)f.style.display='flex'" /><div class="thumb-16x9 thumb-fallback" style="display:none;align-items:center;justify-content:center;color:var(--muted);font-size:0.75rem">官网截图</div></div>`
-        : `<div class="thumb-16x9-wrap"><div class="thumb-16x9" style="display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.75rem">官网截图</div></div>`;
+      const logoName = item.logoName || (() => {
+        const t = String(item.title || "");
+        const m = t.match(/^([^：:]+)/);
+        const part = m ? m[1].trim() : t;
+        return part.length > 16 ? (item.author || part.slice(0, 14) + "…") : part || item.author || "";
+      })();
+      let logoUrl = item.logo || null;
+      if (!logoUrl && item.url) {
+        try { logoUrl = "https://www.google.com/s2/favicons?domain=" + encodeURIComponent(new URL(item.url).origin) + "&sz=128"; } catch (_) {}
+      }
+      const logoBg = item.logoBg || "gradient";
+      const logoBgClass = ["light", "dark", "gradient"].includes(logoBg) ? " logo-bg-" + logoBg : "";
+      const fallbackContent = logoUrl
+        ? `<img src="${escapeAttr(logoUrl)}" alt="" class="tool-logo" onerror="this.style.display='none';var n=this.nextElementSibling;if(n)n.style.display='inline'"/><span class="fallback-text fallback-name" style="display:none">${escapeHtml(logoName)}</span>`
+        : `<span class="fallback-text fallback-name">${escapeHtml(logoName)}</span>`;
+      const thumbFallbackDiv = `<div class="thumb-16x9 thumb-fallback thumb-logo-name${logoBgClass}" style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px">${fallbackContent}</div>`;
+      const thumb = `<div class="thumb-16x9-wrap">${thumbFallbackDiv}</div>`;
+      const pillTag = item.isAlert ? '<span class="tag-pill alert">预警</span>' : (item.tags && item.tags[0] ? `<span class="tag-pill">${escapeHtml(item.tags[0])}</span>` : "");
+      const metaParts = [item.platform, item.author, item.date].filter(Boolean).map((x) => escapeHtml(x));
       return `
-        <article class="card card-tool">
-          <a href="${escapeAttr(item.url)}" target="_blank" rel="noopener">${thumb}</a>
-          <h3>${item.isAlert ? "🚨 " : ""}${escapeHtml(item.title)}</h3>
-          <div class="meta"><span>${escapeHtml(item.platform || "")}</span><span>${escapeHtml(item.author || "")}</span><span>${escapeHtml(item.date || "")}</span></div>
-          <div class="tags">${alertTag}${tags}</div>
-          <p class="summary">${escapeHtml(item.summary || "")}</p>
-          <a class="link" href="${escapeAttr(item.url)}" target="_blank" rel="noopener">访问官网</a>
-        </article>
+        <div class="card-tool-wrap">
+          <article class="card card-tool">
+            <a href="${escapeAttr(item.url)}" target="_blank" rel="noopener">${thumb}</a>
+            <div class="card-tool-body">
+              <div class="card-tool-title">${item.isAlert ? "🚨 " : ""}${escapeHtml(item.title)}</div>
+              <div class="card-tool-desc">${escapeHtml(item.summary || "")}</div>
+              ${metaParts.length ? `<div class="card-tool-meta">${metaParts.join(" · ")}</div>` : ""}
+              <div class="card-tool-footer">
+                <a class="link" href="${escapeAttr(item.url)}" target="_blank" rel="noopener">访问官网</a>
+                ${pillTag}
+              </div>
+            </div>
+          </article>
+        </div>
       `;
     }
 
@@ -895,7 +1202,7 @@
       const plugins = sortItems(all.filter((x) => x.category === "plugin"), mode);
       const el = document.getElementById("panel-tools");
       el.innerHTML = `
-        <p class="summary" style="margin-bottom:12px;color:var(--muted);font-size:0.85rem;">
+        <p class="summary" style="margin-bottom:16px;color:var(--muted);font-size:0.9rem;line-height:1.5;">
           ① 新出现的 AI 设计工具 · ② 已有工具更新 / AI 功能迭代 · ③ 主流设计工具插件（Figma、PS、Sketch 等）。标有 <span class="tag alert" style="display:inline">预警</span> 为重大变更。
         </p>
         <div class="section-title" style="margin-top:0">① 新出现的 AI 设计工具</div>
@@ -925,9 +1232,16 @@
     function renderHot() {
       const d = state.data;
       const mode = document.getElementById("sortSelect")?.value || "heat";
-      const rows = (d.creatorRanking || []).slice().sort((a, b) => (b.heat || 0) - (a.heat || 0));
-      const rankHtml = rows.length
-        ? `<div class="card" style="margin-bottom:20px"><div class="section-title" style="margin-top:0">博主榜单 TOP${rows.length}</div><table class="rank"><thead><tr><th>#</th><th>博主/账号</th><th>平台</th><th>热度</th><th>备注</th></tr></thead><tbody>${rows.map((r, i) => `<tr><td>${i + 1}</td><td>${escapeHtml(r.name)}</td><td>${escapeHtml(r.platform)}</td><td class="stat">${r.heat}</td><td>${escapeHtml(r.note || "")}</td></tr>`).join("")}</tbody></table></div>`
+      const officialItems = d.officialUpdates && d.officialUpdates.length
+        ? sortItems(d.officialUpdates, mode)
+        : sortItems(
+            (d.toolUpdates || []).filter((x) => ["existing", "core"].includes(x.category || "")),
+            mode
+          );
+      const officialHtml = officialItems.length
+        ? `<div class="section-title" style="margin-top:0">设计官方更新</div>
+           <p class="summary" style="margin-bottom:14px;color:var(--muted);font-size:0.9rem;line-height:1.5;">Figma、Midjourney、Spline 等在推特、油管等平台的官方更新，横向滑动查看。</p>
+           <div class="h-scroll" style="margin-bottom:36px">${officialItems.map((x) => toolCardHtml(x, "tool")).join("")}</div>`
         : "";
       const tabsHtml = `
         <div class="platform-tabs" role="tablist" aria-label="平台快速定位">
@@ -954,7 +1268,7 @@
           </div>
         `;
       }).join("");
-      el.innerHTML = rankHtml + `<p class="summary" style="margin-bottom:10px;color:var(--muted);font-size:0.85rem;">油管、推特、小红书、哔哩哔哩博主近 7 天热门内容，每平台不少于 6 条，点击上方平台 Tab 快速定位。</p>` + tabsHtml + blocks;
+      el.innerHTML = officialHtml + `<div class="section-title">设计大Pro</div><p class="summary" style="margin-bottom:14px;color:var(--muted);font-size:0.9rem;line-height:1.5;">油管、推特、小红书、哔哩哔哩博主近 7 天热门内容，点击上方平台 Tab 快速定位。</p>` + tabsHtml + blocks;
       fetchBilibiliThumbs(el);
       el.querySelectorAll(".plat-tab").forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -971,7 +1285,7 @@
       const mode = document.getElementById("sortSelect")?.value || "heat";
       const items = sortItems(d.trends || [], mode);
       document.getElementById("panel-trends").innerHTML = `
-        <p class="summary" style="margin-bottom:12px;color:var(--muted);font-size:0.85rem;">
+        <p class="summary" style="margin-bottom:16px;color:var(--muted);font-size:0.9rem;line-height:1.5;">
           类似优设主页的最新热门推文，抓取自站酷、优设、微信公众号等平台，每条附原文跳转链接。
         </p>
         <div class="grid cols-2">${items.map((x) => cardHtml(x)).join("")}</div>
