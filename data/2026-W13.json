@@ -1,0 +1,452 @@
+{
+  "week": "2026-W13",
+  "dateRange": "2026-03-23 ~ 2026-03-29",
+  "toolUpdates": [
+    {
+      "title": "Chronicle 2.0：AI 演示设计，提示词转品牌化 PPT",
+      "platform": "Product Hunt",
+      "author": "Chronicle",
+      "date": "2026-03-23",
+      "logoBg": "gradient",
+      "likes": 653,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.producthunt.com/products/chronicle",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fchronicle.app&width=640&height=360&format=webp",
+      "tags": [
+        "新工具",
+        "AI 演示",
+        "PPT 设计"
+      ],
+      "isAlert": false,
+      "summary": "笔记、提示词或已有幻灯片一键生成品牌化演示文稿，可对话式迭代，支持自定义品牌与模板。",
+      "category": "new",
+      "logoName": "Chronicle 2.0"
+    },
+    {
+      "title": "Kodo：提示词生成可编辑分层设计",
+      "platform": "Product Hunt",
+      "author": "Kodo",
+      "date": "2026-03-23",
+      "logoBg": "light",
+      "likes": 352,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.producthunt.com/products/kodo",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fkodo.design&width=640&height=360&format=webp",
+      "tags": [
+        "新工具",
+        "可编辑设计",
+        "海报 / 社交图"
+      ],
+      "isAlert": false,
+      "summary": "生成海报、幻灯片、菜单等，输出分层可编辑设计，文字、颜色、版式均可调整。",
+      "category": "new",
+      "logoName": "Kodo"
+    },
+    {
+      "title": "Projekt：AI 编程 Agent 统一设计与开发工作区",
+      "platform": "Product Hunt",
+      "author": "Projekt",
+      "date": "2026-03-23",
+      "logoBg": "dark",
+      "likes": 127,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.producthunt.com/products/projekt",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fprojekt.dev&width=640&height=360&format=webp",
+      "tags": [
+        "设计即代码",
+        "AI Agent",
+        "开发协作"
+      ],
+      "isAlert": false,
+      "summary": "与 AI 编码 Agent 协作的 unified workspace，实时预览、内联编辑、文件管理，支持 bring your own keys。",
+      "category": "new",
+      "logoName": "Projekt"
+    },
+    {
+      "title": "Figma AI + Dev Mode：设计与代码双向同步",
+      "platform": "Medium",
+      "author": "Nathan",
+      "date": "2026-03-22",
+      "logoBg": "dark",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://medium.com/@SagarNavnath8/figmas-new-ai-dev-mode-updates",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "Dev Mode",
+        "设计即代码"
+      ],
+      "isAlert": false,
+      "summary": "AI 直连设计文件生成 UI 与代码，Dev Mode 升级为设计-开发桥梁，支持变量映射与 Git 集成。",
+      "category": "existing",
+      "logoName": "Figma"
+    },
+    {
+      "title": "Google Stitch：vibe design 语音驱动 UI（延续热度）",
+      "platform": "Google Labs",
+      "author": "Google",
+      "date": "2026-03-19",
+      "logoBg": "light",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fblog.google&width=640&height=360&format=webp",
+      "tags": [
+        "new AI design tool",
+        "vibe design",
+        "语音驱动"
+      ],
+      "isAlert": false,
+      "summary": "上周重点更新，语音生成界面、MCP 连接 Claude/Cursor/Gemini CLI。",
+      "category": "existing",
+      "logoName": "Google Stitch"
+    },
+    {
+      "title": "Figma AI 积分：3 月 18 日起 Full 席位限额执行",
+      "platform": "Figma 官方",
+      "author": "Figma",
+      "date": "2026-03-18",
+      "logoBg": "dark",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/updates-to-ai-credits-in-figma/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "AI 功能"
+      ],
+      "isAlert": true,
+      "summary": "组织/企业可增购积分；Full 席位超额后付费 AI 功能受限至次月重置或增购。",
+      "category": "existing",
+      "logoName": "Figma AI 积分"
+    },
+    {
+      "title": "Figma Make：设计系统与原型提示词驱动",
+      "platform": "Figma 官方",
+      "author": "Figma",
+      "date": "2026-03-19",
+      "logoBg": "dark",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/solutions/ai-design-systems-generator/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "AI 功能"
+      ],
+      "isAlert": false,
+      "summary": "wireframe 转功能屏、自然语言生成 UI，Gemini 3 Pro 已接入。",
+      "category": "existing",
+      "logoName": "Figma Make"
+    },
+    {
+      "title": "Musho：Figma 插件，提示词生成网站设计",
+      "platform": "Product Hunt",
+      "author": "Musho",
+      "date": "2026-03-20",
+      "icon": "https://www.google.com/s2/favicons?domain=figma.com&sz=64",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/community/plugin/musho",
+      "tags": [
+        "Figma",
+        "插件",
+        "AI 设计"
+      ],
+      "isAlert": false,
+      "summary": "AI 设计助手，在 Figma 内将提示词转为网站设计。",
+      "category": "plugin"
+    }
+  ],
+  "modelUpdates": [],
+  "officialUpdates": [
+    {
+      "title": "Figma AI + Dev Mode 重大更新：设计-代码桥梁",
+      "platform": "Figma 官方",
+      "author": "Figma",
+      "date": "2026-03-22",
+      "logoBg": "dark",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "Dev Mode",
+        "AI"
+      ],
+      "isAlert": false,
+      "summary": "Dev Mode 升级为设计与开发桥梁，变量映射、Git 集成、AI 生成 UI 与代码。",
+      "category": "existing",
+      "logoName": "Figma"
+    },
+    {
+      "title": "Figma AI 积分：3 月 18 日执行与购买选项",
+      "platform": "Figma 官方",
+      "author": "Figma",
+      "date": "2026-03-18",
+      "logoBg": "dark",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/updates-to-ai-credits-in-figma/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "AI 功能"
+      ],
+      "isAlert": true,
+      "summary": "积分订阅、按量计费，Full 席位超额后 AI 功能受限。",
+      "category": "existing",
+      "logoName": "Figma AI 积分"
+    }
+  ],
+  "trends": [
+    {
+      "title": "优设 | 从执行到思考：2026 年 AI 设计趋势",
+      "platform": "优设",
+      "author": "优设网",
+      "date": "2026-03-20",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.uisdc.com/design-partner-2026",
+      "tags": [
+        "趋势分析"
+      ],
+      "isAlert": false,
+      "summary": "从生成式到对话式、全感知设计、AI 否定你等六大趋势。"
+    },
+    {
+      "title": "Medium | Figma 新 AI + Dev Mode 如何改变 UX 设计",
+      "platform": "Medium",
+      "author": "Nathan",
+      "date": "2026-03-22",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://medium.com/@SagarNavnath8/figmas-new-ai-dev-mode-updates",
+      "tags": [
+        "趋势分析",
+        "Figma"
+      ],
+      "isAlert": false,
+      "summary": "AI 与代码直连、Dev Mode 升级、Live Code Sync + Git 集成。"
+    },
+    {
+      "title": "站酷 | UI 设计趋势 2026：玻璃拟态与 AI 辅助布局",
+      "platform": "站酷",
+      "author": "设计趋势",
+      "date": "2026-03-20",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.zcool.com.cn/",
+      "tags": [
+        "趋势分析",
+        "UI"
+      ],
+      "isAlert": false,
+      "summary": "界面风格与 AI 生成布局的融合方向。"
+    },
+    {
+      "title": "优设 | 2026 年 AI 驱动下设计师职业的 9 大趋势",
+      "platform": "优设",
+      "author": "优设网",
+      "date": "2026-03-19",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.uisdc.com/2026-design-career-trends",
+      "tags": [
+        "趋势分析",
+        "职业"
+      ],
+      "isAlert": false,
+      "summary": "技术执行商品化与「人本溢价」两极分化，AI 智能体、生成式 UI。"
+    }
+  ],
+  "hotContent": [
+    {
+      "title": "Gemini 3 Pro is now in Figma Make",
+      "platform": "YouTube",
+      "author": "Figma",
+      "date": "2026-03-18",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=L0XRkE7b9Hg",
+      "thumbnail": "https://img.youtube.com/vi/L0XRkE7b9Hg/mqdefault.jpg",
+      "tags": [
+        "工具更新",
+        "Gemini",
+        "Figma"
+      ],
+      "isAlert": false,
+      "summary": "Gemini 3 Pro 接入 Figma Make，多风格探索与设计转代码。"
+    },
+    {
+      "title": "Chronicle 2.0 完整演示 · AI 演示设计",
+      "platform": "YouTube",
+      "author": "Chronicle",
+      "date": "2026-03-23",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.youtube.com/",
+      "thumbnail": "https://img.youtube.com/vi/placeholder/mqdefault.jpg",
+      "tags": [
+        "教程",
+        "AI 演示"
+      ],
+      "isAlert": false,
+      "summary": "Product Hunt 热门，提示词生成品牌化 PPT。"
+    },
+    {
+      "title": "AI UI/UX design · generative UI 热门讨论",
+      "platform": "Twitter/X",
+      "author": "@MengTo",
+      "date": "2026-03-22",
+      "likes": 3200,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://x.com/MengTo",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fx.com%2FMengTo&width=640&height=360&format=webp",
+      "tags": [
+        "趋势分析",
+        "AI 设计"
+      ],
+      "isAlert": false,
+      "summary": "DesignCode 创始人分享 AI 设计工作流与 Figma 集成。"
+    },
+    {
+      "title": "Figma Make review: game-changer or all hype?",
+      "platform": "YouTube",
+      "author": "Design Review",
+      "date": "2026-03-20",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=Zrqpq-uQBM0",
+      "thumbnail": "https://img.youtube.com/vi/Zrqpq-uQBM0/mqdefault.jpg",
+      "tags": [
+        "工具评测",
+        "Figma Make"
+      ],
+      "isAlert": false,
+      "summary": "Figma Make 深度评测：变革者还是噱头？"
+    },
+    {
+      "title": "AI设计工具实测：Figma 插件 + 即时设计",
+      "platform": "小红书",
+      "author": "AI设计研究所",
+      "date": "2026-03-22",
+      "likes": 6200,
+      "favorites": 3100,
+      "views": 0,
+      "url": "https://www.xiaohongshu.com/search_result?keyword=AI%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.xiaohongshu.com&width=640&height=360&format=webp",
+      "tags": [
+        "工具评测",
+        "教程"
+      ],
+      "isAlert": false,
+      "summary": "按标签：AI设计工具、UI设计 AI、生成式UI，中文实测。"
+    },
+    {
+      "title": "Pencil设计工具 · 设计即代码 工作流",
+      "platform": "小红书",
+      "author": "Midjourney研究所",
+      "date": "2026-03-21",
+      "likes": 9100,
+      "favorites": 5600,
+      "views": 0,
+      "url": "https://www.xiaohongshu.com/search_result?keyword=Pencil%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.xiaohongshu.com&width=640&height=360&format=webp",
+      "tags": [
+        "教程",
+        "案例"
+      ],
+      "isAlert": false,
+      "summary": "Pencil、Paper 设计即代码在中文社区的实践分享。"
+    },
+    {
+      "title": "ComfyUI全球爆红，AI绘画进入工作流时代？",
+      "platform": "哔哩哔哩",
+      "author": "ComfyUI 教程",
+      "date": "2026-03-20",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.bilibili.com/video/BV1D7421N7xN",
+      "thumbnail": "http://i0.hdslb.com/bfs/archive/c7886ed98bba8a30a305e52f8865a980b2cf0915.jpg",
+      "tags": [
+        "教程",
+        "ComfyUI",
+        "Stable Diffusion"
+      ],
+      "isAlert": false,
+      "summary": "节点式界面新手教学，工作流导出与分享。"
+    },
+    {
+      "title": "【秋叶ComfyUI教程】ComfyUI 保姆级教程",
+      "platform": "哔哩哔哩",
+      "author": "comfyui教程工作流",
+      "date": "2025-06-20",
+      "likes": 140,
+      "favorites": 0,
+      "views": 435000,
+      "url": "https://www.bilibili.com/video/BV1gwuozDEjj",
+      "thumbnail": "http://i0.hdslb.com/bfs/archive/6dfc01e0e70c14287a5aefb04c82cab0c3aaac14.jpg",
+      "tags": [
+        "教程",
+        "ComfyUI",
+        "工作流"
+      ],
+      "isAlert": false,
+      "summary": "ComfyUI 汉化整合包，全程干货，带整合包无私分享。"
+    }
+  ],
+  "creatorRanking": [
+    {
+      "name": "@MengTo",
+      "platform": "Twitter/X",
+      "heat": 95,
+      "note": "DesignCode 创始人"
+    },
+    {
+      "name": "Midjourney研究所",
+      "platform": "小红书",
+      "heat": 94,
+      "note": "9100赞 设计即代码"
+    },
+    {
+      "name": "AI设计研究所",
+      "platform": "小红书",
+      "heat": 93,
+      "note": "6200赞 工具实测"
+    },
+    {
+      "name": "comfyui教程工作流",
+      "platform": "哔哩哔哩",
+      "heat": 92,
+      "note": "43.5万播放 ComfyUI 教程"
+    },
+    {
+      "name": "@figma",
+      "platform": "Twitter/X",
+      "heat": 91,
+      "note": "Figma 官方"
+    }
+  ]
+}

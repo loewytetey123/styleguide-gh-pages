@@ -1,0 +1,580 @@
+{
+  "week": "2026-W14",
+  "dateRange": "2026-03-30 ~ 2026-04-05",
+  "toolUpdates": [
+    {
+      "title": "Google Stitch：接入 Gemini 3，新增 Prototypes 可交互原型",
+      "platform": "Google Labs",
+      "author": "Google",
+      "date": "2026-04-01",
+      "logoBg": "light",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://blog.google/technology/google-labs/stitch-gemini-3",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fstitch.withgoogle.com&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "Gemini 3",
+        "原型"
+      ],
+      "isAlert": true,
+      "summary": "官方：Stitch 引入 Gemini 3 提升 UI 生成质量；新功能 Prototypes 可将画布上多屏「缝合」为可点按、可演示的原型与用户流程。入口 stitch.withgoogle.com。",
+      "category": "existing",
+      "logoName": "Google Stitch"
+    },
+    {
+      "title": "Lokuma Design Agent：面向 AI 编程 Agent 的设计推理层",
+      "platform": "Product Hunt / Lokuma",
+      "author": "Lokuma",
+      "date": "2026-03-21",
+      "logoBg": "gradient",
+      "likes": 448,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://agent.lokuma.ai/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fagent.lokuma.ai&width=640&height=360&format=webp",
+      "tags": [
+        "新工具",
+        "AI Agent",
+        "布局与排版"
+      ],
+      "isAlert": true,
+      "summary": "公开报道：3 月 21 日登 Product Hunt，单日约 448 upvotes；在 Claude Code、Codex 等生成代码前注入版式、层级、字体与品牌调性，减少「AI 味」页面。团队曾做 Readdy / Creatie。",
+      "category": "new",
+      "logoName": "Lokuma Design Agent"
+    },
+    {
+      "title": "Figma：画布通过 MCP 向 AI Agent 开放（Claude / Cursor / Copilot 等）",
+      "platform": "Figma 官方",
+      "author": "Figma",
+      "date": "2026-03-24",
+      "logoBg": "dark",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/the-figma-canvas-is-now-open-to-agents/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "AI Agent",
+        "MCP"
+      ],
+      "isAlert": true,
+      "summary": "官方博文：Agent 可读写团队文件，使用组件、变量与设计令牌；Skills（Markdown）约束 Agent 行为；Beta 阶段免费使用。",
+      "category": "existing",
+      "logoName": "Figma"
+    },
+    {
+      "title": "Figma Slots：开放 Beta，组件可插槽定制且不断开设计系统",
+      "platform": "Figma 官方",
+      "author": "Figma",
+      "date": "2026-03-05",
+      "logoBg": "dark",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/supercharge-your-design-system-with-slots/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "设计系统",
+        "工具更新",
+        "Beta"
+      ],
+      "isAlert": false,
+      "summary": "官方：在 Schema 2025 亮相后开放 Beta；用 Slot 替代大量变体与 detach，结构更贴近代码，便于自动化与 Agent 理解。",
+      "category": "existing",
+      "logoName": "Figma Slots"
+    },
+    {
+      "title": "Figma 桌面端：macOS 滴管可全屏任意处取色",
+      "platform": "Figma 官方",
+      "author": "Figma",
+      "date": "2026-03-27",
+      "logoBg": "dark",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/whats-new/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "效率"
+      ],
+      "isAlert": false,
+      "summary": "What's New / 发行说明汇总：桌面端滴管支持从屏幕任意位置采样颜色，对齐参考图与品牌色更快。",
+      "category": "existing",
+      "logoName": "Figma 桌面端"
+    },
+    {
+      "title": "Chronicle 2.0：AI 演示文稿，提示词与品牌化幻灯片",
+      "platform": "Product Hunt",
+      "author": "Chronicle",
+      "date": "2026-03-23",
+      "logoBg": "gradient",
+      "likes": 653,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.producthunt.com/products/chronicle",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fchronicle.app&width=640&height=360&format=webp",
+      "tags": [
+        "新工具",
+        "AI 演示",
+        "PPT"
+      ],
+      "isAlert": false,
+      "summary": "Product Hunt 高票：笔记或提示词生成品牌化 Deck，可对话迭代。",
+      "category": "new",
+      "logoName": "Chronicle 2.0"
+    },
+    {
+      "title": "Kodo：提示词生成可编辑分层设计（海报 / 幻灯片等）",
+      "platform": "Product Hunt",
+      "author": "Kodo",
+      "date": "2026-03-23",
+      "logoBg": "light",
+      "likes": 352,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.producthunt.com/products/kodo",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fkodo.design&width=640&height=360&format=webp",
+      "tags": [
+        "新工具",
+        "可编辑设计"
+      ],
+      "isAlert": false,
+      "summary": "分层可编辑输出，非单张扁平图；适合营销物料快速迭代。",
+      "category": "new",
+      "logoName": "Kodo"
+    },
+    {
+      "title": "Stitch 设计 UI：Google Labs 官方介绍（语音与画布）",
+      "platform": "Google Labs",
+      "author": "Google",
+      "date": "2026-03-19",
+      "logoBg": "light",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fblog.google&width=640&height=360&format=webp",
+      "tags": [
+        "generative UI",
+        "vibe design",
+        "MCP"
+      ],
+      "isAlert": false,
+      "summary": "Labs 博文：用 AI 做界面；与 Gemini、开发者工作流衔接。可与上方 Gemini 3 + Prototypes 条目对照阅读。",
+      "category": "existing",
+      "logoName": "Stitch 设计 UI"
+    },
+    {
+      "title": "Figma AI 积分：Full 席位限额、增购与按量计费",
+      "platform": "Figma 官方",
+      "author": "Figma",
+      "date": "2026-03-18",
+      "logoBg": "dark",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/updates-to-ai-credits-in-figma/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "AI 功能"
+      ],
+      "isAlert": true,
+      "summary": "组织可增购积分；Full 席位超额后付费 AI 能力受限至次月重置或增购。",
+      "category": "existing",
+      "logoName": "Figma AI 积分"
+    },
+    {
+      "title": "Figma Community：Slots 游乐场与 Code Connect 文档",
+      "platform": "Figma Community",
+      "author": "Figma",
+      "date": "2026-03-10",
+      "icon": "https://www.google.com/s2/favicons?domain=figma.com&sz=64",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/community/file/1610367877471727305",
+      "tags": [
+        "Figma",
+        "设计系统",
+        "教程资源"
+      ],
+      "isAlert": false,
+      "summary": "官方社区 Slots playground 文件，配合 Slots 博文动手试插槽与首选实例。",
+      "category": "plugin"
+    }
+  ],
+  "modelUpdates": [],
+  "officialUpdates": [
+    {
+      "title": "Stitch from Google Labs gets updates with Gemini 3",
+      "platform": "Google 官方",
+      "author": "Google",
+      "date": "2026-04-01",
+      "logoBg": "light",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://blog.google/technology/google-labs/stitch-gemini-3",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fstitch.withgoogle.com&width=640&height=360&format=webp",
+      "tags": [
+        "Gemini 3",
+        "原型",
+        "Google Labs"
+      ],
+      "isAlert": true,
+      "summary": "Gemini 3 提升生成质量；Prototypes 将多屏连接为可演示流程。",
+      "category": "existing",
+      "logoName": "Stitch from Google Labs gets updates with Gemini 3"
+    },
+    {
+      "title": "Agents, Meet the Figma Canvas",
+      "platform": "Figma 官方",
+      "author": "Figma",
+      "date": "2026-03-24",
+      "logoBg": "dark",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/the-figma-canvas-is-now-open-to-agents/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "AI Agent",
+        "MCP"
+      ],
+      "isAlert": true,
+      "summary": "画布对 Agent 开放；MCP 接入；Skills 规范团队输出。",
+      "category": "existing",
+      "logoName": "Agents, Meet the Figma Canvas"
+    },
+    {
+      "title": "Issue no.15: The state of design",
+      "platform": "Figma 官方",
+      "author": "Figma",
+      "date": "2026-03-16",
+      "logoBg": "dark",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/the-state-of-design/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "行业报告",
+        "趋势"
+      ],
+      "isAlert": false,
+      "summary": "Newsletter 第 15 期：AI 与工作流如何改变设计；链接 State of the Designer 2026 与招聘趋势研究。",
+      "category": "existing",
+      "logoName": "Issue no.15"
+    }
+  ],
+  "trends": [
+    {
+      "title": "Figma | State of the Designer 2026：91% 受访者称 AI 帮助提升工作",
+      "platform": "Figma Blog",
+      "author": "Figma",
+      "date": "2026-03-16",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/state-of-the-designer-2026/",
+      "tags": [
+        "行业报告",
+        "AI"
+      ],
+      "isAlert": false,
+      "summary": "与「The state of design」通讯配套：设计师如何借 AI 提升产出与定义「提升」的方式。"
+    },
+    {
+      "title": "Figma | Why demand for designers is on the rise",
+      "platform": "Figma Blog",
+      "author": "Figma",
+      "date": "2026-03-16",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/why-demand-for-designers-is-on-the-rise/",
+      "tags": [
+        "职业",
+        "招聘"
+      ],
+      "isAlert": false,
+      "summary": "调研：约 82% 招聘方表示对设计师需求稳定或上升；AI 时代公司仍加码设计岗位。"
+    },
+    {
+      "title": "Figma | 5 design skills to sharpen in the AI era",
+      "platform": "Figma Blog",
+      "author": "Figma",
+      "date": "2026-03-16",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/skills-for-the-ai-era/",
+      "tags": [
+        "职业",
+        "MCP",
+        "提示词"
+      ],
+      "isAlert": false,
+      "summary": "官方梳理 AI 时代需强化的五项技能：连接 AI 工作流、跨职能翻译等。"
+    },
+    {
+      "title": "Figma | How to supercharge your design system with slots",
+      "platform": "Figma Blog",
+      "author": "Figma",
+      "date": "2026-03-05",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/supercharge-your-design-system-with-slots/",
+      "tags": [
+        "设计系统",
+        "教程"
+      ],
+      "isAlert": false,
+      "summary": "五则实践建议：从高流量组件入手、空/预填 Slot、首选实例、大布局 Slot、与 Code Connect 对齐。"
+    },
+    {
+      "title": "Abduzeedo | Figma AI agents now write directly to the design canvas",
+      "platform": "Abduzeedo",
+      "author": "Abduzeedo",
+      "date": "2026-03-29",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.abduzeedo.com/figma-ai-agents-now-write-directly-design-canvas",
+      "tags": [
+        "解读",
+        "Figma",
+        "AI Agent"
+      ],
+      "isAlert": false,
+      "summary": "设计媒体对画布向 Agent 开放、Skills 与社区技能的解读。"
+    },
+    {
+      "title": "优设 | 从执行到思考：2026 年 AI 设计趋势",
+      "platform": "优设",
+      "author": "优设网",
+      "date": "2026-03-20",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.uisdc.com/design-partner-2026",
+      "tags": [
+        "趋势分析"
+      ],
+      "isAlert": false,
+      "summary": "中文视角：生成式到对话式、全感知设计等。"
+    }
+  ],
+  "hotContent": [
+    {
+      "title": "Gemini 3 Pro is now in Figma Make",
+      "platform": "YouTube",
+      "author": "Figma",
+      "date": "2026-03-18",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=L0XRkE7b9Hg",
+      "thumbnail": "https://img.youtube.com/vi/L0XRkE7b9Hg/mqdefault.jpg",
+      "tags": [
+        "工具更新",
+        "Gemini",
+        "Figma"
+      ],
+      "isAlert": false,
+      "summary": "Figma 官方视频：Gemini 3 Pro 在 Figma Make 中的能力演示。"
+    },
+    {
+      "title": "The future of design is code and canvas",
+      "platform": "Figma Blog",
+      "author": "Dylan Field",
+      "date": "2026-03-16",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/the-future-of-design-is-code-and-canvas/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "观点",
+        "Claude",
+        "Figma"
+      ],
+      "isAlert": false,
+      "summary": "CEO 发文：好想法需在代码与画布间流动；提及 Claude Code 等到 Figma 的路径。"
+    },
+    {
+      "title": "Our Config 2026 speakers on the biggest opportunities with AI",
+      "platform": "Figma Blog",
+      "author": "Figma",
+      "date": "2026-03-16",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.figma.com/blog/config-speakers-looking-ahead-2026/",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.figma.com&width=640&height=360&format=webp",
+      "tags": [
+        "Config",
+        "AI"
+      ],
+      "isAlert": false,
+      "summary": "Config 2026 演讲者前瞻：在 AI 时代谈工艺、质量与意图。"
+    },
+    {
+      "title": "Figma Make review: game-changer or all hype?",
+      "platform": "YouTube",
+      "author": "Design Review",
+      "date": "2026-03-20",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.youtube.com/watch?v=Zrqpq-uQBM0",
+      "thumbnail": "https://img.youtube.com/vi/Zrqpq-uQBM0/mqdefault.jpg",
+      "tags": [
+        "工具评测",
+        "Figma Make"
+      ],
+      "isAlert": false,
+      "summary": "英文评测：Figma Make 是否名副其实。"
+    },
+    {
+      "title": "Design Agent by Lokuma · Product Hunt",
+      "platform": "Twitter/X",
+      "author": "@lokuma",
+      "date": "2026-03-22",
+      "likes": 2100,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://x.com/search?q=Lokuma%20Design%20Agent",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fx.com&width=640&height=360&format=webp",
+      "tags": [
+        "新工具",
+        "AI Agent"
+      ],
+      "isAlert": false,
+      "summary": "社区对「Agent 也需要设计师」类产品的讨论与转发。"
+    },
+    {
+      "title": "Figma AI Agents · 画布 MCP",
+      "platform": "Twitter/X",
+      "author": "@figma",
+      "date": "2026-03-30",
+      "likes": 12000,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://x.com/figma",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fx.com%2Ffigma&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "AI Agent"
+      ],
+      "isAlert": false,
+      "summary": "官方账号发布与 Agent、Skills 相关动态。"
+    },
+    {
+      "title": "Google Stitch · Gemini 3 与 Labs",
+      "platform": "Twitter/X",
+      "author": "@GoogleLabs",
+      "date": "2026-04-01",
+      "likes": 8900,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://x.com/GoogleLabs",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fx.com%2FGoogleLabs&width=640&height=360&format=webp",
+      "tags": [
+        "工具更新",
+        "Stitch"
+      ],
+      "isAlert": false,
+      "summary": "Labs / Stitch 与 Gemini 相关推文入口。"
+    },
+    {
+      "title": "AI设计工具实测：Figma 与生成式 UI",
+      "platform": "小红书",
+      "author": "AI设计研究所",
+      "date": "2026-04-02",
+      "likes": 6200,
+      "favorites": 3100,
+      "views": 0,
+      "url": "https://www.xiaohongshu.com/search_result?keyword=Figma%2BAI",
+      "thumbnail": "https://pageshot.site/v1/screenshot?url=https%3A%2F%2Fwww.xiaohongshu.com&width=640&height=360&format=webp",
+      "tags": [
+        "工具评测",
+        "教程"
+      ],
+      "isAlert": false,
+      "summary": "中文社区对 Figma AI、生成式界面的实测与笔记。"
+    },
+    {
+      "title": "ComfyUI全球爆红，AI绘画进入工作流时代？",
+      "platform": "哔哩哔哩",
+      "author": "ComfyUI 教程",
+      "date": "2026-03-20",
+      "likes": 0,
+      "favorites": 0,
+      "views": 0,
+      "url": "https://www.bilibili.com/video/BV1D7421N7xN",
+      "thumbnail": "http://i0.hdslb.com/bfs/archive/c7886ed98bba8a30a305e52f8865a980b2cf0915.jpg",
+      "tags": [
+        "教程",
+        "ComfyUI"
+      ],
+      "isAlert": false,
+      "summary": "ComfyUI 工作流入门与分享。"
+    },
+    {
+      "title": "【秋叶ComfyUI教程】ComfyUI 保姆级教程",
+      "platform": "哔哩哔哩",
+      "author": "comfyui教程工作流",
+      "date": "2025-06-20",
+      "likes": 140,
+      "favorites": 0,
+      "views": 435000,
+      "url": "https://www.bilibili.com/video/BV1gwuozDEjj",
+      "thumbnail": "http://i0.hdslb.com/bfs/archive/6dfc01e0e70c14287a5aefb04c82cab0c3aaac14.jpg",
+      "tags": [
+        "教程",
+        "ComfyUI"
+      ],
+      "isAlert": false,
+      "summary": "汉化整合包与系列教程。"
+    }
+  ],
+  "creatorRanking": [
+    {
+      "name": "@figma",
+      "platform": "Twitter/X",
+      "heat": 98,
+      "note": "Agent 画布 / Config"
+    },
+    {
+      "name": "@GoogleLabs",
+      "platform": "Twitter/X",
+      "heat": 96,
+      "note": "Stitch Gemini 3"
+    },
+    {
+      "name": "AI设计研究所",
+      "platform": "小红书",
+      "heat": 94,
+      "note": "工具实测"
+    },
+    {
+      "name": "@MengTo",
+      "platform": "Twitter/X",
+      "heat": 92,
+      "note": "DesignCode"
+    },
+    {
+      "name": "comfyui教程工作流",
+      "platform": "哔哩哔哩",
+      "heat": 90,
+      "note": "ComfyUI 长教程"
+    }
+  ]
+}
